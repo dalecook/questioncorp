@@ -1,0 +1,140 @@
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2010-06-16 19:09:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, destroy, and new):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-16 19:09:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined local variable or method `user_session_path' for #<ActionView::Base:0x18d8334>) on line #3 of app/views/user_sessions/new.html.erb:
+1: <h1>Login</h1>
+2: 
+3: <% form_for @user_session, :url => user_session_path do |f| %>
+4:   <%= f.error_messages %>
+5:   <%= f.label :login %><br />
+6:   <%= f.text_field :login %><br />
+
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (83.6ms)
+Rendered rescues/_request_and_response (10.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-16 19:10:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+
+ActionView::TemplateError (user_session_url failed to generate from {:controller=>"user_sessions", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["user_sessions", :id] - are they all satisfied?) on line #3 of app/views/user_sessions/new.html.erb:
+1: <h1>Login</h1>
+2: 
+3: <% form_for @user_session, :url => user_session_path do |f| %>
+4:   <%= f.error_messages %>
+5:   <%= f.label :login %><br />
+6:   <%= f.text_field :login %><br />
+
+    (eval):16:in `user_session_path'
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (43.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-16 19:10:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+
+ActionView::TemplateError (user_session_url failed to generate from {:controller=>"user_session", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["user_session", :id] - are they all satisfied?) on line #3 of app/views/user_sessions/new.html.erb:
+1: <h1>Login</h1>
+2: 
+3: <% form_for @user_session, :url => user_session_path do |f| %>
+4:   <%= f.error_messages %>
+5:   <%= f.label :login %><br />
+6:   <%= f.text_field :login %><br />
+
+    (eval):16:in `user_session_path'
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (39.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-16 19:10:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+
+ActionView::TemplateError (user_session_url failed to generate from {:controller=>"user_session", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["user_session", :id] - are they all satisfied?) on line #3 of app/views/user_sessions/new.html.erb:
+1: <h1>Login</h1>
+2: 
+3: <% form_for @user_session, :url => user_session_path do |f| %>
+4:   <%= f.error_messages %>
+5:   <%= f.label :login %><br />
+6:   <%= f.text_field :login %><br />
+
+    (eval):16:in `user_session_path'
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (38.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-06-16 19:10:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_session"}
+
+NameError (uninitialized constant UserSessionController):
+  
+
+Rendered rescues/_trace (90.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-16 19:10:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+
+ActionView::TemplateError (user_session_url failed to generate from {:controller=>"user_sessions", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["user_session", :id] - are they all satisfied?) on line #3 of app/views/user_sessions/new.html.erb:
+1: <h1>Login</h1>
+2: 
+3: <% form_for @user_session, :url => user_session_path do |f| %>
+4:   <%= f.error_messages %>
+5:   <%= f.label :login %><br />
+6:   <%= f.text_field :login %><br />
+
+    (eval):16:in `user_session_path'
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (39.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-16 19:14:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `login' for #<UserSession: no credentials provided>) on line #6 of app/views/user_sessions/new.html.erb:
+3: <% form_for @user_session, :url => user_session_path do |f| %>
+4:   <%= f.error_messages %>
+5:   <%= f.label :login %><br />
+6:   <%= f.text_field :login %><br />
+7:   <br />
+8:   <%= f.label :password %><br />
+9:   <%= f.password_field :password %><br />
+
+    app/views/user_sessions/new.html.erb:6
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
