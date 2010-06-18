@@ -1,0 +1,25 @@
+<h1>Your Interview</h1>
+<h2>Please answer all the questions on this page.</h2>
+
+<%= @test %>
+
+<% form_for(@interview) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name, "Enter your full name so we'll know who you are." %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+  	<div>Questions</div>
+  	<% @questions.each_with_index do |q,i| %>
+	  <div class="question"><%= i+1 %>. <%= q.question %></div>
+	  <div class="answer">
+	  	<%= text_area_tag "[questions][#{q.id}]" %>
+	  </div>
+	<% end %>
+  </p>		
+  <p>
+    <%= f.submit "I'm Finished" %>
+  </p>
+<% end %>

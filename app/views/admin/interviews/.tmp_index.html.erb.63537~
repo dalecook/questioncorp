@@ -1,0 +1,15 @@
+<h1>Listing interviews</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @interviews.each do |interview| %>
+  <tr>
+    <td><%=h interview.name %></td>
+    <td><%= link_to 'View', interview %></td>
+    <td><%= link_to 'Destroy', interview, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

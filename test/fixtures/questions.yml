@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+question_one:
+  question: Have you ever gone skydiving before
+  user_id: 1
+  active: true
+
+question_two:
+  question: What's your favorite month
+  user_id: 1
+  active: true
+  
+question_three:
+  question: What would you name your own company
+  user_id: 1
+  active: true    
+
+question_four:
+  question: Why is this question not active
+  user_id: 1
+  active: false
