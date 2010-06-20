@@ -8785,3 +8785,28 @@ Rendering admin/questions/index
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
 Completed in 139ms (View: 76, DB: 2) | 200 OK [http://localhost/admin/questions]
+
+
+Processing InterviewsController#index (for 127.0.0.1 at 2010-06-20 12:54:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"interviews"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, new, and show):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing InterviewsController#new (for 127.0.0.1 at 2010-06-20 12:54:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"interviews"}
+Rendering template within layouts/application
+Rendering interviews/new
+  [4;36;1mQuestion Load (0.7ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/interviews/new]
+
+
+Processing InterviewsController#new (for 127.0.0.1 at 2010-06-20 12:56:09) [GET]
+  Parameters: {"action"=>"new", "controller"=>"interviews"}
+Rendering template within layouts/application
+Rendering interviews/new
+  [4;35;1mQuestion Load (0.6ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/]
