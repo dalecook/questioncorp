@@ -8,6 +8,10 @@ class Interview < ActiveRecord::Base
 
   acts_as_commentable
 
+  def self.find_with_answers(id)
+    self.find id, :include => [{:answers => :question}], :order => "questions.id ASC"
+  end
+
 private
 
   #after the interview is complete we'll send an email to each of the users notifying them that the 

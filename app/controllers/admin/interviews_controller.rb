@@ -16,7 +16,7 @@ class Admin::InterviewsController < ApplicationController
   # GET /interviews/1
   # GET /interviews/1.xml
   def show
-    @interview = Interview.find(params[:id], :include => [{:answers => :question}])
+    @interview = Interview.find_with_answers(params[:id])
     @comments = @interview.comments_ordered_by_submitted
     @comment = Comment.new
     
