@@ -412,6 +412,12 @@ button.button:active, a.button:active {
 	color: #5f5f5f;
 }
 
+.answer_block .inactive {
+	background-color: #7A1818;
+	color: #fff;
+	padding: 2px;
+}
+
 .answer_block .answer {
 	margin: 5px 0 0 0;
 }
@@ -426,3 +432,5 @@ button.button:active, a.button:active {
 	color: #afafaf;
 	font-size: 0.8em;
 }
+
+
