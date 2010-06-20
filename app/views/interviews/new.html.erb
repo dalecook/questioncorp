@@ -1,4 +1,4 @@
-<h2>Your Interview : Please answer all the questions on this page.</h2>
+<h2>Your Interview - Please answer all the questions on this page.</h2>
 
 <%= @test %>
 
@@ -7,15 +7,17 @@
 
   <p>
     <%= f.label :name, "Enter your full name so we'll know who you are." %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :size => 55, :maxlength => 255 %>
   </p>
   <p>
-  	<div>Questions</div>
+  	<h2>Questions</h2>
   	<% @questions.each_with_index do |q,i| %>
-	  <div class="question"><%= i+1 %>. <%= q.question %></div>
-	  <div class="answer">
-	  	<%= text_area_tag "[questions][#{q.id}]" %>
-	  </div>
+		<div class="question_block">
+		  <div class="question"><%= i+1 %>. <%= q.question %></div>
+		  <div class="answer">
+		  	<%= text_area_tag "[questions][#{q.id}]", "", :rows => 2, :cols => 56 %>
+		  </div>
+		</div
 	<% end %>
   </p>		
   <p>

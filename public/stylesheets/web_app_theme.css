@@ -395,3 +395,34 @@ button.button:hover, a.button:hover {
 button.button:active, a.button:active {
   background-color:#e5e5e5;
 }
+
+.headline {
+	font-size: 1.4em;
+	margin: 15px 0 10px 0;
+	font-weight: bold;
+}
+
+.answer_block {
+	font-size: 1.2em;
+	margin: 10px 0 15px 5px;	
+}
+
+.answer_block .question {
+	font-style: italic;
+	color: #5f5f5f;
+}
+
+.answer_block .answer {
+	margin: 5px 0 0 0;
+}
+
+.comment_block {
+	margin: 10px 0 10px 5px;
+	font-size: 1.2em;
+}
+
+.comment_block .comment_info {
+	font-style: italic;
+	color: #afafaf;
+	font-size: 0.8em;
+}

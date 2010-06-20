@@ -15,23 +15,23 @@
 				<div class="answer">A. <%= answer.answer %></div>
 			</div>
 		<% end %>
-								
+		
+		<div id="comment-form">
+			<% remote_form_for [:admin, @comment] do |f| %>		
+				<%= hidden_field_tag :interview_id, @interview.id %>	
+				<%= f.text_area :comment %>
+				<%= f.submit %>
+			<% end -%>
+		</div>	
+						
 		<div class='comments'>
 			<b>Comments</b>
 			<div id="comment_list">
-				<% @comments.each do |comment| %>
+				<% @interview.comments.each do |comment| %>
 					<%= render :partial => "admin/comments/comment_block", :locals => {:comment => comment} %>
 				<% end %>      
 			</div>
 		</div>
-		<div id="comment_form">
-			<% remote_form_for [:admin, @comment] do |f| %>		
-				<%= hidden_field_tag :interview_id, @interview.id %>	
-				<%= f.text_area :comment, :rows => 4, :cols => 60 %>
-				<br/>
-				<%= f.submit "Add Comment"%>
-			<% end -%>
-		</div>	
     </div>
   </div>
 </div>

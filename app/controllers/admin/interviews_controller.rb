@@ -10,31 +10,28 @@ class Admin::InterviewsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @interviews }
     end
   end
 
   # GET /interviews/1
   # GET /interviews/1.xml
   def show
-    @interview = Interview.find(params[:id], :include => [{:answers => :question}, :comments])
+    @interview = Interview.find(params[:id], :include => [{:answers => :question}])
+    @comments = @interview.comments_ordered_by_submitted
     @comment = Comment.new
     
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @interview }
     end
   end
 
   # DELETE /interviews/1
   # DELETE /interviews/1.xml
   def destroy
-    @interview = Interview.find(params[:id])
-    @interview.destroy
+    Interview.find(params[:id]).destroy
 
     respond_to do |format|
-      format.html { redirect_to(interviews_url) }
-      format.xml  { head :ok }
+      format.html { redirect_to(admin_interviews_url) }
     end
   end
 end

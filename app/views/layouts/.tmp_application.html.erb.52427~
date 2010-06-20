@@ -8,16 +8,8 @@
   <%= stylesheet_link_tag 'application' %>
 </head>
 <body>
-	
-	<div id="content">
-		<div id="header">
-			<h1>Questions Corporation</h1>
-			<div id="tag_line">
-				We'll ask the questions, thank you very much!
-			</div>
-		</div>
-		<%= yield %>
-	</div>
-	
+
+<%= yield %>
+
 </body>
 </html>
