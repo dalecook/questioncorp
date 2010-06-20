@@ -23,6 +23,7 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :admin do |admin|
     admin.resources :questions
     admin.resources :interviews
+    admin.resources :comments
   end
 
   map.resources :interviews

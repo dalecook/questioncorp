@@ -19,6 +19,8 @@ class Admin::QuestionsController < ApplicationController
   # POST /questions.xml
   def create
     @question = Question.new(params[:question])
+    
+    #user and active cannot be set by mass assignment so set them here
     @question.user = current_user
     @question.active = true
 

@@ -2,6 +2,7 @@
   <div class="secondary-navigation">
     <ul class="wat-cf">
       <li class="first"><%= link_to "#{t("web-app-theme.list", :default => "List")}", admin_interviews_path  %></li>
+      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_admin_interview_path %></li>
       <li class="active"><%= link_to "#{t("web-app-theme.show", :default => "Show")}", admin_interview_path %></li>
     </ul>
   </div>          
@@ -18,22 +19,17 @@
 			</div>
 		<% end %>
 		
-		<div id="comment-form">
-			<% remote_form_for [:admin, @comment] do |f| %>		
-				<%= hidden_field_tag :interview_id, @interview.id %>	
-				<%= f.text_area :comment %>
-				<%= f.submit %>
-			<% end -%>
-		</div>	
-						
 		<div class='comments'>
 			<b>Comments</b>
-			<div id="comment_list">
-				<% @interview.comments.each do |comment| %>
-					<%= render :partial => "admin/comments/comment_block", :locals => {:comment => comment} %>
-				<% end %>      
-			</div>
+			<% @interview.comments.each do |comment| %>
+				<div class='comment-block'>
+					<div class='comment'><%= comment.comment %></div>
+					<div class='comment-info'><%= comment.created_at.to_words%> by <%= comment.user.login %></div>
+				</div>
+			<% end %>      
 		</div>
     </div>
   </div>
 </div>
+
+<% content_for :sidebar, render(:partial => 'sidebar') -%>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100618062520) do
+ActiveRecord::Schema.define(:version => 20100618174905) do
 
   create_table "answers", :force => true do |t|
     t.integer  "interview_id"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20100618062520) do
     t.datetime "current_login_at"
     t.string   "last_login_ip"
     t.string   "current_login_ip"
+    t.string   "email"
   end
 
   add_index "users", ["last_request_at"], :name => "index_users_on_last_request_at"

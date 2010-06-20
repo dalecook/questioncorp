@@ -17,61 +17,12 @@ class Admin::InterviewsController < ApplicationController
   # GET /interviews/1
   # GET /interviews/1.xml
   def show
-    @interview = Interview.find(params[:id], :include => [{:answers => :question}])
+    @interview = Interview.find(params[:id], :include => [{:answers => :question}, :comments])
+    @comment = Comment.new
     
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @interview }
-    end
-  end
-
-  # GET /interviews/new
-  # GET /interviews/new.xml
-  def new
-    @interview = Interview.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @interview }
-    end
-  end
-
-  # GET /interviews/1/edit
-  def edit
-    @interview = Interview.find(params[:id])
-  end
-
-  # POST /interviews
-  # POST /interviews.xml
-  def create
-    @interview = Interview.new(params[:interview])
-
-    respond_to do |format|
-      if @interview.save
-        flash[:notice] = 'Interview was successfully created.'
-        format.html { redirect_to(@interview) }
-        format.xml  { render :xml => @interview, :status => :created, :location => @interview }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @interview.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # PUT /interviews/1
-  # PUT /interviews/1.xml
-  def update
-    @interview = Interview.find(params[:id])
-
-    respond_to do |format|
-      if @interview.update_attributes(params[:interview])
-        flash[:notice] = 'Interview was successfully updated.'
-        format.html { redirect_to(@interview) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @interview.errors, :status => :unprocessable_entity }
-      end
     end
   end
 

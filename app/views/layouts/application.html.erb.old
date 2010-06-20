@@ -4,19 +4,17 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Questions Corporation</title>
   <%= stylesheet_link_tag "web_app_theme", "web_app_theme_override", "themes/default/style", :cache => true %>
-  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js" %>
 </head>
 <body>
   <div id="container">
     <div id="header">
-      <h1><a href="/">Questions Corporation :  Admin</a></h1>
+      <h1><a href="/">Questions Corpration</a></h1>
       <div id="user-navigation">
         <ul class="wat-cf">
-          <li><a href="/logout" class="logout"><%= t("web-app-theme.logout", :default => "Logout") %></a></li>
         </ul>
       </div>      
       <div id="main-navigation">
-        <ul class="wat-cf"> <li class="<%= controller.controller_path == 'admin/interviews' ? 'active' : '' %>"><a href="<%= admin_interviews_path %>">Interviews</a></li> <li class="<%= controller.controller_path == 'admin/questions' ? 'active' : '' %>"><a href="<%= admin_questions_path %>">Questions</a></li></ul>
+        <ul class="wat-cf"></ul>
       </div>
     </div>    
     <div id="wrapper" class="wat-cf">

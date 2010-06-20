@@ -1,0 +1,4 @@
+<div class='comment-block'>
+	<div class='comment'><%= comment.comment %></div>
+	<div class='comment-info'><%= distance_of_time_in_words_to_now(comment.created_at) %> ago by <%= comment.user.login %></div>
+</div>

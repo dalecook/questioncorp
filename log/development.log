@@ -4393,3 +4393,1836 @@ Rendering template within layouts/application
 Rendering interviews/new
   [4;35;1mQuestion Load (0.5ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
 Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing InterviewsController#new (for 127.0.0.1 at 2010-06-18 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"interviews"}
+Rendering template within layouts/application
+Rendering interviews/new
+  [4;36;1mQuestion Load (0.5ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-18 00:26:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-18 07:26:23', "updated_at" = '2010-06-18 07:26:23' WHERE "id" = 1[0m
+  [4;35;1mInterview Load (0.2ms)[0m   [0mSELECT * FROM "interviews" [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/index
+Completed in 27ms (View: 2, DB: 1) | 200 OK [http://localhost/admin/interviews]
+
+
+Processing Admin::QuestionsController#index (for 127.0.0.1 at 2010-06-18 00:26:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/questions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-18 07:26:24', "updated_at" = '2010-06-18 07:26:24' WHERE "id" = 1[0m
+Rendering template within layouts/admin
+Rendering admin/questions/index
+  [4;36;1mQuestion Load (0.5ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 38ms (View: 14, DB: 2) | 200 OK [http://localhost/admin/questions]
+
+
+Processing Admin::QuestionsController#index (for 127.0.0.1 at 2010-06-18 00:26:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/questions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-18 07:26:37', "updated_at" = '2010-06-18 07:26:37' WHERE "id" = 1[0m
+Rendering template within layouts/admin
+Rendering admin/questions/index
+  [4;36;1mQuestion Load (0.5ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 40ms (View: 15, DB: 2) | 200 OK [http://localhost/admin/questions]
+
+
+Processing InterviewsController#new (for 127.0.0.1 at 2010-06-18 00:26:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"interviews"}
+Rendering template within layouts/application
+Rendering interviews/new
+  [4;36;1mQuestion Load (0.6ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing InterviewsController#create (for 127.0.0.1 at 2010-06-18 00:27:04) [POST]
+  Parameters: {"interview"=>{"name"=>"Dale Cook"}, "commit"=>"I'm Finished", "questions"=>{"1"=>"No", "2"=>"December, it's my birthday", "3"=>"Dale Corp."}, "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"interviews"}
+  [4;35;1mInterview Create (0.4ms)[0m   [0mINSERT INTO "interviews" ("name", "updated_at", "created_at") VALUES('Dale Cook', '2010-06-18 07:27:04', '2010-06-18 07:27:04')[0m
+  [4;36;1mAnswer Create (0.1ms)[0m   [0;1mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('No', '2010-06-18 07:27:04', 1, 1, '2010-06-18 07:27:04')[0m
+  [4;35;1mAnswer Create (0.1ms)[0m   [0mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('December, it''s my birthday', '2010-06-18 07:27:04', 2, 1, '2010-06-18 07:27:04')[0m
+  [4;36;1mAnswer Create (0.1ms)[0m   [0;1mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('Dale Corp.', '2010-06-18 07:27:04', 3, 1, '2010-06-18 07:27:04')[0m
+Redirected to http://localhost:3000/interviews/1
+Completed in 22ms (DB: 1) | 302 Found [http://localhost/interviews]
+
+
+Processing InterviewsController#show (for 127.0.0.1 at 2010-06-18 00:27:04) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"interviews"}
+  [4;35;1mInterview Load (0.2ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering interviews/show
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/interviews/1]
+
+
+Processing InterviewsController#show (for 127.0.0.1 at 2010-06-18 00:27:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"interviews"}
+  [4;36;1mInterview Load (0.2ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering interviews/show
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/interviews/1]
+
+
+Processing Admin::QuestionsController#index (for 127.0.0.1 at 2010-06-18 00:27:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/questions"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-18 07:27:30', "updated_at" = '2010-06-18 07:27:30' WHERE "id" = 1[0m
+Rendering template within layouts/admin
+Rendering admin/questions/index
+  [4;35;1mQuestion Load (0.5ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 40ms (View: 15, DB: 2) | 200 OK [http://localhost/admin/questions]
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-18 00:27:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (1.2ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-18 07:27:32', "updated_at" = '2010-06-18 07:27:32' WHERE "id" = 1[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/index
+Completed in 32ms (View: 7, DB: 2) | 200 OK [http://localhost/admin/interviews]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 00:27:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-18 07:27:37', "updated_at" = '2010-06-18 07:27:37' WHERE "id" = 1[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 1) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 1) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (1,2,3)) [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 45ms (View: 11, DB: 2) | 200 OK [http://localhost/admin/interviews/1]
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100617015656)
+Migrating to CreateQuestions (20100617052100)
+Migrating to CreateInterviews (20100618052223)
+Migrating to CreateAnswers (20100618052350)
+Migrating to CreateComments (20100618062520)
+Migrating to AddEmailAddressToUsers (20100618174905)
+  [4;36;1mSQL (25.9ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mALTER TABLE "users" ADD "email" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100618174905')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("answers")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_comments_on_user_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_comments_on_commentable_id')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_comments_on_commentable_type')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("interviews")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("questions")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_info('index_users_on_last_request_at')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_users_on_persistence_token')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_users_on_login')[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ceo@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'bobceo') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '39f0ab27d28ada3177f3fa07a0718007d949f3d78eb49659667dfda4c980c62a59ee19d4ea282aa25b35a36b85685c7092c1ed00f8595a66ce86350c13fc1525') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("last_login_at", "updated_at", "last_request_at", "crypted_password", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "login", "created_at", "last_login_ip", "email") VALUES(NULL, '2010-06-18 18:06:54', NULL, 'fe86a4fc6dd3b35c99cfedf26f816e3360385a9758fc4c8b12e1b23cb96ade724428db8d9701eebe841137fb3f146d91654c5b8a76e01cc9aa9ae9c3b78d1d65', NULL, 'WRNMdsg3M9-x8aROzzKO', NULL, '39f0ab27d28ada3177f3fa07a0718007d949f3d78eb49659667dfda4c980c62a59ee19d4ea282aa25b35a36b85685c7092c1ed00f8595a66ce86350c13fc1525', 0, 'bobceo', '2010-06-18 18:06:54', NULL, 'ceo@questionscorp.com')[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dave@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'daveadmin') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd41a5fd083bd656b0bfa45e84c950524e82e694e038e36ab2c60c1c548aee07a1e52196595eaa4263afc13773783006ab523d447a1feabf7c668e72793479173') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("last_login_at", "updated_at", "last_request_at", "crypted_password", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "login", "created_at", "last_login_ip", "email") VALUES(NULL, '2010-06-18 18:06:54', NULL, '7bf2f9a10bf64920dbccd67fdb6297aa1ea2971d53b70c302bba42ba08bbfc0e8fe492d2ed77e08deba291e8a29b7a8e434a2398ce7640b78ce15819e23a3b51', NULL, 'uArsxbO3Lunlbx_iemay', NULL, 'd41a5fd083bd656b0bfa45e84c950524e82e694e038e36ab2c60c1c548aee07a1e52196595eaa4263afc13773783006ab523d447a1feabf7c668e72793479173', 0, 'daveadmin', '2010-06-18 18:06:54', NULL, 'dave@questionscorp.com')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'justin@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'justinintern') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '49ed0c11682c96e323aecc74671de7982fe83a8b72bac308b7d6bffc25617c9d53ca0c6eb05abb6104325448bcc272c39a0db7b9738ef9f4dd6fba6ea6ddd170') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("last_login_at", "updated_at", "last_request_at", "crypted_password", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "login", "created_at", "last_login_ip", "email") VALUES(NULL, '2010-06-18 18:06:54', NULL, 'ee9b0a2a992c450f04b8b316f9f3ed2440be34216c7fc7b98baeda4b7bfa72a210453b6b4be06bcbd90f27c79b299dad080eb2907150e15f9c3ad51282c063f8', NULL, 'v-mGKP4jq561K6_cP6ft', NULL, '49ed0c11682c96e323aecc74671de7982fe83a8b72bac308b7d6bffc25617c9d53ca0c6eb05abb6104325448bcc272c39a0db7b9738ef9f4dd6fba6ea6ddd170', 0, 'justinintern', '2010-06-18 18:06:54', NULL, 'justin@questionscorp.com')[0m
+  [4;36;1mQuestion Create (0.4ms)[0m   [0;1mINSERT INTO "questions" ("updated_at", "question", "user_id", "active", "created_at") VALUES('2010-06-18 18:06:54', 'Have you ever gone skydiving before?', 4, 't', '2010-06-18 18:06:54')[0m
+  [4;35;1mQuestion Create (0.5ms)[0m   [0mINSERT INTO "questions" ("updated_at", "question", "user_id", "active", "created_at") VALUES('2010-06-18 18:06:54', 'What''s your favorite month?', 4, 't', '2010-06-18 18:06:54')[0m
+  [4;36;1mQuestion Create (0.4ms)[0m   [0;1mINSERT INTO "questions" ("updated_at", "question", "user_id", "active", "created_at") VALUES('2010-06-18 18:06:54', 'What would you name your own company?', 4, 't', '2010-06-18 18:06:54')[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+
+
+Processing InterviewsController#new (for 127.0.0.1 at 2010-06-18 11:22:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"interviews"}
+Rendering template within layouts/application
+Rendering interviews/new
+  [4;36;1mQuestion Load (0.6ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
+Completed in 353ms (View: 189, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing InterviewsController#create (for 127.0.0.1 at 2010-06-18 11:22:46) [POST]
+  Parameters: {"interview"=>{"name"=>"Dale Cook"}, "commit"=>"I'm Finished", "questions"=>{"6"=>"dsfdsafds sadf sadf", "7"=>"sdfasdf sadf dsf as", "5"=>"dfsd sdf dsfasf"}, "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"interviews"}
+  [4;35;1mInterview Create (0.5ms)[0m   [0mINSERT INTO "interviews" ("name", "updated_at", "created_at") VALUES('Dale Cook', '2010-06-18 18:22:46', '2010-06-18 18:22:46')[0m
+  [4;36;1mAnswer Create (0.1ms)[0m   [0;1mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('dsfdsafds sadf sadf', '2010-06-18 18:22:46', 6, 2, '2010-06-18 18:22:46')[0m
+  [4;35;1mAnswer Create (0.1ms)[0m   [0mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('sdfasdf sadf dsf as', '2010-06-18 18:22:46', 7, 2, '2010-06-18 18:22:46')[0m
+  [4;36;1mAnswer Create (0.1ms)[0m   [0;1mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('dfsd sdf dsfasf', '2010-06-18 18:22:46', 5, 2, '2010-06-18 18:22:46')[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+
+ArgumentError (wrong number of arguments (1 for 2)):
+  app/models/interview.rb:17:in `notify_users'
+  app/controllers/interviews_controller.rb:34:in `create'
+  app/controllers/interviews_controller.rb:33:in `create'
+
+Rendered rescues/_trace (56.4ms)
+Rendered rescues/_request_and_response (39.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InterviewsController#create (for 127.0.0.1 at 2010-06-18 11:23:51) [POST]
+  Parameters: {"interview"=>{"name"=>"Dale Cook"}, "commit"=>"I'm Finished", "questions"=>{"6"=>"dsfdsafds sadf sadf", "7"=>"sdfasdf sadf dsf as", "5"=>"dfsd sdf dsfasf"}, "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"interviews"}
+  [4;36;1mInterview Create (0.4ms)[0m   [0;1mINSERT INTO "interviews" ("name", "updated_at", "created_at") VALUES('Dale Cook', '2010-06-18 18:23:51', '2010-06-18 18:23:51')[0m
+  [4;35;1mAnswer Create (0.2ms)[0m   [0mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('dsfdsafds sadf sadf', '2010-06-18 18:23:51', 6, 2, '2010-06-18 18:23:51')[0m
+  [4;36;1mAnswer Create (0.1ms)[0m   [0;1mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('sdfasdf sadf dsf as', '2010-06-18 18:23:51', 7, 2, '2010-06-18 18:23:51')[0m
+  [4;35;1mAnswer Create (0.1ms)[0m   [0mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('dfsd sdf dsfasf', '2010-06-18 18:23:51', 5, 2, '2010-06-18 18:23:51')[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+Sent mail to ceo@questionscorp.com, dave@questionscorp.com, justin@questionscorp.com
+
+Date: Fri, 18 Jun 2010 11:23:51 -0700
+From: no_reply@questionscorp.com
+To: ceo@questionscorp.com, dave@questionscorp.com, justin@questionscorp.com
+Subject: Dale Cook has completed their interview
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+@interview.name has completeed their interview.
+Redirected to http://localhost:3000/interviews/2
+Completed in 113ms (DB: 2) | 302 Found [http://localhost/interviews]
+
+
+Processing InterviewsController#show (for 127.0.0.1 at 2010-06-18 11:23:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"interviews"}
+  [4;35;1mInterview Load (0.2ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering interviews/show
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/interviews/2]
+
+
+Processing InterviewsController#create (for 127.0.0.1 at 2010-06-18 11:26:09) [POST]
+  Parameters: {"interview"=>{"name"=>"Dale Cook"}, "commit"=>"I'm Finished", "questions"=>{"6"=>"dsfdsafds sadf sadf", "7"=>"sdfasdf sadf dsf as", "5"=>"dfsd sdf dsfasf"}, "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"interviews"}
+  [4;36;1mInterview Create (0.4ms)[0m   [0;1mINSERT INTO "interviews" ("name", "updated_at", "created_at") VALUES('Dale Cook', '2010-06-18 18:26:09', '2010-06-18 18:26:09')[0m
+  [4;35;1mAnswer Create (0.1ms)[0m   [0mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('dsfdsafds sadf sadf', '2010-06-18 18:26:09', 6, 3, '2010-06-18 18:26:09')[0m
+  [4;36;1mAnswer Create (0.1ms)[0m   [0;1mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('sdfasdf sadf dsf as', '2010-06-18 18:26:09', 7, 3, '2010-06-18 18:26:09')[0m
+  [4;35;1mAnswer Create (0.1ms)[0m   [0mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('dfsd sdf dsfasf', '2010-06-18 18:26:09', 5, 3, '2010-06-18 18:26:09')[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+Sent mail to ceo@questionscorp.com, dave@questionscorp.com, justin@questionscorp.com
+
+Date: Fri, 18 Jun 2010 11:26:09 -0700
+From: no_reply@questionscorp.com
+To: ceo@questionscorp.com, dave@questionscorp.com, justin@questionscorp.com
+Subject: Dale Cook has completed their interview
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Dale Cook has completeed their interview.
+Redirected to http://localhost:3000/interviews/3
+Completed in 66ms (DB: 1) | 302 Found [http://localhost/interviews]
+
+
+Processing InterviewsController#show (for 127.0.0.1 at 2010-06-18 11:26:09) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"interviews"}
+  [4;35;1mInterview Load (0.2ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering interviews/show
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/interviews/3]
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+
+
+Processing InterviewsController#new (for 127.0.0.1 at 2010-06-18 12:12:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"interviews"}
+Rendering template within layouts/application
+Rendering interviews/new
+  [4;36;1mQuestion Load (0.5ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
+Completed in 97ms (View: 72, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-18 12:12:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::QuestionsController#index (for 127.0.0.1 at 2010-06-18 12:13:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/questions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 38ms (DB: 0) | 302 Found [http://localhost/admin/questions]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-18 12:13:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 50ms (View: 34, DB: 1) | 200 OK [http://localhost/user_session/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-18 12:13:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-18 12:13:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering user_sessions/new
+Completed in 76ms (View: 58, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-06-18 12:13:39) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"password"=>"[FILTERED]", "login"=>"bobceo", "remember_me"=>"0"}, "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'bobceo') LIMIT 1[0m
+  [4;36;1mUser Update (1.7ms)[0m   [0;1mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "last_request_at" = '2010-06-18 19:13:40', "updated_at" = '2010-06-18 19:13:40', "current_login_at" = '2010-06-18 19:13:40' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/admin/questions
+Completed in 840ms (DB: 3) | 302 Found [http://localhost/user_session]
+
+
+Processing Admin::QuestionsController#index (for 127.0.0.1 at 2010-06-18 12:13:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/questions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-18 19:13:40', "updated_at" = '2010-06-18 19:13:40' WHERE "id" = 4[0m
+Rendering template within layouts/admin
+Rendering admin/questions/index
+  [4;35;1mQuestion Load (0.6ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Completed in 89ms (View: 39, DB: 2) | 200 OK [http://localhost/admin/questions]
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-18 12:13:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (1.5ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-18 19:13:44', "updated_at" = '2010-06-18 19:13:44' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.5ms)[0m   [0mSELECT * FROM "interviews" [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/index
+Completed in 77ms (View: 42, DB: 3) | 200 OK [http://localhost/admin/interviews]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 12:13:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-18 19:13:49', "updated_at" = '2010-06-18 19:13:49' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.9ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 2 AND "comments".commentable_type = 'Interview') ORDER BY created_at ASC[0m
+Rendered admin/interviews/_sidebar (22.6ms)
+Completed in 474ms (View: 87, DB: 3) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-18 12:19:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-18 19:19:49', "updated_at" = '2010-06-18 19:19:49' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.4ms)[0m   [0;1mSELECT * FROM "interviews" [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/index
+Completed in 64ms (View: 11, DB: 1) | 200 OK [http://localhost/admin/interviews]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 12:19:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-18 19:19:51', "updated_at" = '2010-06-18 19:19:51' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+
+ActionView::TemplateError (undefined method `comment' for :comment:Symbol) on line #24 of app/views/admin/interviews/show.html.erb:
+21: 		
+22: 		<div id="comment-form">
+23: 			<% remote_form_for [:admin, :comment] do  |f| %>		
+24: 				<%= f.text_area :comment %>
+25: 				<%= submit_tag %>
+26: 			<% end -%>
+27: 		</div>	
+
+    app/views/admin/interviews/show.html.erb:24
+    app/views/admin/interviews/show.html.erb:23
+    app/controllers/admin/interviews_controller.rb:22:in `show'
+
+Rendered rescues/_trace (49.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 12:20:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-18 19:20:40', "updated_at" = '2010-06-18 19:20:40' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.9ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `comments' for #<Class:0x25ca4e8>):
+  app/controllers/admin/interviews_controller.rb:21:in `show'
+
+Rendered rescues/_trace (31.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 12:22:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-18 19:22:05', "updated_at" = '2010-06-18 19:22:05' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 2 AND "comments".commentable_type = 'Interview') ORDER BY created_at ASC[0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 76ms (View: 13, DB: 3) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 12:22:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-18 19:22:49', "updated_at" = '2010-06-18 19:22:49' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.9ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 2 AND "comments".commentable_type = 'Interview') ORDER BY created_at ASC[0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 160ms (View: 13, DB: 3) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 12:25:38) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-18 19:25:38', "updated_at" = '2010-06-18 19:25:38' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 2 AND "comments".commentable_type = 'Interview') ORDER BY created_at ASC[0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 75ms (View: 13, DB: 3) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 12:37:07) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-18 19:37:07', "updated_at" = '2010-06-18 19:37:07' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mComment Load (0.8ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 2 AND "comments".commentable_type = 'Interview') ORDER BY created_at ASC[0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 98ms (View: 13, DB: 4) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-06-18 12:56:12) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdf dsfdsfa sdf"}}
+
+LoadError (Expected /Users/dalecook/workspace/questioncorp/app/controllers/admin/comments_controller.rb to define Admin::CommentsController):
+  
+
+Rendered rescues/_trace (21519.2ms)
+Rendered rescues/_request_and_response (72.1ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+
+
+Processing InterviewsController#new (for 127.0.0.1 at 2010-06-18 16:15:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"interviews"}
+Rendering template within layouts/application
+Rendering interviews/new
+  [4;36;1mQuestion Load (0.6ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
+Completed in 382ms (View: 256, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-18 16:15:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-18 16:15:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (7.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (24.9ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-18 23:15:47', "updated_at" = '2010-06-18 23:15:47' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.4ms)[0m   [0mSELECT * FROM "interviews" [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/index
+Completed in 312ms (View: 97, DB: 33) | 200 OK [http://localhost/admin/interviews]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 16:15:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-18 23:15:50', "updated_at" = '2010-06-18 23:15:50' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.7ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 2 AND "comments".commentable_type = 'Interview') ORDER BY created_at ASC[0m
+Rendered admin/interviews/_sidebar (18.6ms)
+Completed in 220ms (View: 49, DB: 4) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 16:16:02) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfgdsfg dfgfdgfdg"}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-18 23:16:02', "updated_at" = '2010-06-18 23:16:02' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-18 23:16:02', 2, 4, '', '2010-06-18 23:16:02')[0m
+
+NameError (uninitialized constant Mime::XHR):
+  app/controllers/admin/comments_controller.rb:16:in `create'
+  app/controllers/admin/comments_controller.rb:14:in `create'
+
+Rendered rescues/_trace (36.5ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 16:48:16) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfgdsfg dfgfdgfdg"}}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-18 23:48:16', "updated_at" = '2010-06-18 23:48:16' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-18 23:48:16', 2, 4, '', '2010-06-18 23:48:16')[0m
+
+ActionView::MissingTemplate (Missing template admin/comments/new.erb in view path app/views):
+  app/controllers/admin/comments_controller.rb:22:in `create'
+  app/controllers/admin/comments_controller.rb:14:in `create'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 21:09:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (12.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (22.4ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:09:37', "updated_at" = '2010-06-19 04:09:37' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 2 AND "comments".commentable_type = 'Interview') ORDER BY created_at ASC[0m
+
+ActionView::TemplateError (undefined method `to_words' for Fri Jun 18 23:16:02 UTC 2010:Time) on line #36 of app/views/admin/interviews/show.html.erb:
+33: 				<% @interview.comments.each do |comment| %>
+34: 					<div class='comment-block'>
+35: 						<div class='comment'><%= comment.comment %></div>
+36: 						<div class='comment-info'><%= comment.created_at.to_words%> by <%= comment.user.login %></div>
+37: 					</div>
+38: 				<% end %>      
+39: 			</div>
+
+    app/views/admin/interviews/show.html.erb:36
+    app/views/admin/interviews/show.html.erb:33
+    app/controllers/admin/interviews_controller.rb:23:in `show'
+
+Rendered rescues/_trace (154.5ms)
+Rendered rescues/_request_and_response (10.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 21:12:55) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (42.3ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:12:55', "updated_at" = '2010-06-19 04:12:55' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.4ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (41.1ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mComment Load (0.9ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 2 AND "comments".commentable_type = 'Interview') ORDER BY created_at ASC[0m
+
+ActionView::TemplateError (ActiveSupport::TimeWithZone can't be coerced into Fixnum) on line #36 of app/views/admin/interviews/show.html.erb:
+33: 				<% @interview.comments.each do |comment| %>
+34: 					<div class='comment-block'>
+35: 						<div class='comment'><%= comment.comment %></div>
+36: 						<div class='comment-info'><%= distance_of_time_in_words(comment.created_at) %> by <%= comment.user.login %></div>
+37: 					</div>
+38: 				<% end %>      
+39: 			</div>
+
+    app/views/admin/interviews/show.html.erb:36
+    app/views/admin/interviews/show.html.erb:33
+    app/controllers/admin/interviews_controller.rb:23:in `show'
+
+Rendered rescues/_trace (45.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 21:14:08) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:14:08', "updated_at" = '2010-06-19 04:14:08' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mComment Load (1.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 2 AND "comments".commentable_type = 'Interview') ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 86ms (View: 43, DB: 4) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 21:14:50) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfasdf asfsadfds sdfadfsd"}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:14:50', "updated_at" = '2010-06-19 04:14:50' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 04:14:50', 2, 4, 'sdfasdf asfsadfds sdfadfsd', '2010-06-19 04:14:50')[0m
+
+ActionView::MissingTemplate (Missing template admin/comments/new.erb in view path app/views):
+  app/controllers/admin/comments_controller.rb:22:in `create'
+  app/controllers/admin/comments_controller.rb:14:in `create'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 21:14:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:14:54', "updated_at" = '2010-06-19 04:14:54' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mComment Load (0.9ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 2 AND "comments".commentable_type = 'Interview') ORDER BY created_at ASC[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 75ms (View: 15, DB: 4) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 21:15:42) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-19 04:15:42', "updated_at" = '2010-06-19 04:15:42' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (1.2ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 69ms (View: 8, DB: 4) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 21:17:44) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfasdf asfsadfds sdfadfsd"}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:17:44', "updated_at" = '2010-06-19 04:17:44' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 04:17:44', 2, 4, 'sdfasdf asfsadfds sdfadfsd', '2010-06-19 04:17:44')[0m
+
+ActionView::MissingTemplate (Missing template admin/comments/new.erb in view path app/views):
+  app/controllers/admin/comments_controller.rb:22:in `create'
+  app/controllers/admin/comments_controller.rb:14:in `create'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 21:19:14) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfasdf asfsadfds sdfadfsd"}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:19:14', "updated_at" = '2010-06-19 04:19:14' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+REQUEST: false
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 04:19:14', 2, 4, 'sdfasdf asfsadfds sdfadfsd', '2010-06-19 04:19:14')[0m
+
+ActionView::MissingTemplate (Missing template admin/comments/new.erb in view path app/views):
+  app/controllers/admin/comments_controller.rb:22:in `create'
+  app/controllers/admin/comments_controller.rb:14:in `create'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 21:20:52) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfasdf asfsadfds sdfadfsd"}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:20:52', "updated_at" = '2010-06-19 04:20:52' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+REQUEST: #<ActionController::Request:0x250c1b4 @content_type=#<Mime::Type:0x5e72e8 @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded", @synonyms=[]>, @request_method=:post, @env={"action_controller.rescue.request"=>#<ActionController::Request:0x250c1b4 ...>, "SERVER_NAME"=>"localhost", "rack.request.cookie_hash"=>{"__utma"=>"1.951966301.1273189167.1275610530.1276298761.7", "user_credentials"=>"39f0ab27d28ada3177f3fa07a0718007d949f3d78eb49659667dfda4c980c62a59ee19d4ea282aa25b35a36b85685c7092c1ed00f8595a66ce86350c13fc1525::4", "__utmz"=>"1.1273189167.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)", "siesse:usercookiehash"=>"428287255", "_questioncorp_session"=>"BAh7CiIYdXNlcl9jcmVkZW50aWFsc19pZGkJIhV1c2VyX2NyZWRlbnRpYWxzIgGAMzlmMGFiMjdkMjhhZGEzMTc3ZjNmYTA3YTA3MTgwMDdkOTQ5ZjNkNzhlYjQ5NjU5NjY3ZGZkYTRjOTgwYzYyYTU5ZWUxOWQ0ZWEyODJhYTI1YjM1YTM2Yjg1Njg1YzcwOTJjMWVkMDBmODU5NWE2NmNlODYzNTBjMTNmYzE1MjU6EF9jc3JmX3Rva2VuIjFGN2cyOEkxYm81OURKd05nU2piWUNtdG82TitucXVoTktmUm5LbTVDcXRZPToPc2Vzc2lvbl9pZCIlY2Q1NWNkNzdiZWQ1NmNiNzZjM2IxOTg2MzAxODUyYTgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--8e707dd7e9ce8cf8cfcf85bf306db418391d4000", "siesse:usercookie"=>"4096750"}, "PATH_INFO"=>"/admin/comments", "CONTENT_LENGTH"=>"150", "HTTP_ACCEPT_ENCODING"=>"gzip,deflate", "HTTP_USER_AGENT"=>"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.2.3) Gecko/20100401 Firefox/3.6.3", "rack.url_scheme"=>"http", "rack.run_once"=>false, "rack.input"=>#<StringIO:0x2540888>, "action_controller.request.request_parameters"=>{"commit"=>"Save changes", "interview_id"=>"2", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "comment"=>{"comment"=>"sdfasdf asfsadfds sdfadfsd"}}, "SCRIPT_NAME"=>"", "SERVER_PROTOCOL"=>"HTTP/1.1", "HTTP_ACCEPT_LANGUAGE"=>"en-us,en;q=0.5", "HTTP_HOST"=>"localhost:3000", "rack.errors"=>#<IO:0x2f7c4>, "REMOTE_ADDR"=>"127.0.0.1", "SERVER_SOFTWARE"=>"Mongrel 1.1.4", "HTTP_KEEP_ALIVE"=>"115", "REQUEST_PATH"=>"/admin/comments", "rack.request.cookie_string"=>"__utma=1.951966301.1273189167.1275610530.1276298761.7; __utmz=1.1273189167.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); siesse%3Ausercookie=4096750; siesse%3Ausercookiehash=428287255; _questioncorp_session=BAh7CiIYdXNlcl9jcmVkZW50aWFsc19pZGkJIhV1c2VyX2NyZWRlbnRpYWxzIgGAMzlmMGFiMjdkMjhhZGEzMTc3ZjNmYTA3YTA3MTgwMDdkOTQ5ZjNkNzhlYjQ5NjU5NjY3ZGZkYTRjOTgwYzYyYTU5ZWUxOWQ0ZWEyODJhYTI1YjM1YTM2Yjg1Njg1YzcwOTJjMWVkMDBmODU5NWE2NmNlODYzNTBjMTNmYzE1MjU6EF9jc3JmX3Rva2VuIjFGN2cyOEkxYm81OURKd05nU2piWUNtdG82TitucXVoTktmUm5LbTVDcXRZPToPc2Vzc2lvbl9pZCIlY2Q1NWNkNzdiZWQ1NmNiNzZjM2IxOTg2MzAxODUyYTgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA%3D--8e707dd7e9ce8cf8cfcf85bf306db418391d4000; user_credentials=39f0ab27d28ada3177f3fa07a0718007d949f3d78eb49659667dfda4c980c62a59ee19d4ea282aa25b35a36b85685c7092c1ed00f8595a66ce86350c13fc1525%3A%3A4", "CONTENT_TYPE"=>"application/x-www-form-urlencoded", "HTTP_REFERER"=>"http://localhost:3000/admin/interviews/2", "rack.request.query_hash"=>{}, "rack.request.form_input"=>#<StringIO:0x2540888>, "HTTP_COOKIE"=>"__utma=1.951966301.1273189167.1275610530.1276298761.7; __utmz=1.1273189167.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); siesse%3Ausercookie=4096750; siesse%3Ausercookiehash=428287255; _questioncorp_session=BAh7CiIYdXNlcl9jcmVkZW50aWFsc19pZGkJIhV1c2VyX2NyZWRlbnRpYWxzIgGAMzlmMGFiMjdkMjhhZGEzMTc3ZjNmYTA3YTA3MTgwMDdkOTQ5ZjNkNzhlYjQ5NjU5NjY3ZGZkYTRjOTgwYzYyYTU5ZWUxOWQ0ZWEyODJhYTI1YjM1YTM2Yjg1Njg1YzcwOTJjMWVkMDBmODU5NWE2NmNlODYzNTBjMTNmYzE1MjU6EF9jc3JmX3Rva2VuIjFGN2cyOEkxYm81OURKd05nU2piWUNtdG82TitucXVoTktmUm5LbTVDcXRZPToPc2Vzc2lvbl9pZCIlY2Q1NWNkNzdiZWQ1NmNiNzZjM2IxOTg2MzAxODUyYTgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA%3D--8e707dd7e9ce8cf8cfcf85bf306db418391d4000; user_credentials=39f0ab27d28ada3177f3fa07a0718007d949f3d78eb49659667dfda4c980c62a59ee19d4ea282aa25b35a36b85685c7092c1ed00f8595a66ce86350c13fc1525%3A%3A4", "HTTP_ACCEPT_CHARSET"=>"ISO-8859-1,utf-8;q=0.7,*;q=0.7", "HTTP_VERSION"=>"HTTP/1.1", "rack.multithread"=>false, "rack.version"=>[1, 0], "action_controller.request.path_parameters"=>{"action"=>"create", "controller"=>"admin/comments"}, "rack.request.form_vars"=>"authenticity_token=F7g28I1bo59DJwNgSjbYCmto6N%2BnquhNKfRnKm5CqtY%3D&interview_id=2&comment%5Bcomment%5D=sdfasdf+asfsadfds+sdfadfsd&commit=Save+changes", "REQUEST_URI"=>"/admin/comments", "rack.multiprocess"=>false, "SERVER_PORT"=>"3000", "rack.request.query_string"=>"", "action_controller.rescue.response"=>#<ActionController::Response:0x250c18c @redirected_to=nil, @template=#<ActionView::Base:0x250bfc0 @controller=#<Admin::CommentsController:0x250c074 @current_user=#<User id: 4, created_at: "2010-06-18 18:06:54", updated_at: "2010-06-19 04:20:52", login: "bobceo", crypted_password: "fe86a4fc6dd3b35c99cfedf26f816e3360385a9758fc4c8b12e...", password_salt: "WRNMdsg3M9-x8aROzzKO", persistence_token: "39f0ab27d28ada3177f3fa07a0718007d949f3d78eb49659667...", login_count: 1, last_request_at: "2010-06-19 04:20:52", last_login_at: nil, current_login_at: "2010-06-18 19:13:40", last_login_ip: nil, current_login_ip: "127.0.0.1", email: "ceo@questionscorp.com">, @request_origin="127.0.0.1 at 2010-06-18 21:20:52", @_request=#<ActionController::Request:0x250c1b4 ...>, @performed_render=false, @interview=#<Interview id: 2, name: "Dale Cook", created_at: "2010-06-18 18:23:51", updated_at: "2010-06-18 18:23:51">, @_headers={"Cache-Control"=>"no-cache"}, @template=#<ActionView::Base:0x250bfc0 ...>, @before_filter_chain_aborted=false, @current_user_session=#<UserSession: {:unauthorized_record=>"<protected>"}>, @action_name="create", @_response=#<ActionController::Response:0x250c18c ...>, @real_format=nil, @url=#<ActionController::UrlRewriter:0x250b7f0 @parameters={"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfasdf asfsadfds sdfadfsd"}}, @request=#<ActionController::Request:0x250c1b4 ...>>, @performed_redirect=false, @_session={"user_credentials_id"=>4, "user_credentials"=>"39f0ab27d28ada3177f3fa07a0718007d949f3d78eb49659667dfda4c980c62a59ee19d4ea282aa25b35a36b85685c7092c1ed00f8595a66ce86350c13fc1525", :_csrf_token=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", :session_id=>"cd55cd77bed56cb76c3b1986301852a8", "flash"=>{}}, @_params={"commit"=>"Save changes", "interview_id"=>"2", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "action"=>"create", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfasdf asfsadfds sdfadfsd"}}, @comment=#<Comment id: nil, comment: "sdfasdf asfsadfds sdfadfsd", commentable_id: 2, commentable_type: "Interview", user_id: 4, created_at: nil, updated_at: nil>, @cookies={"user_credentials"=>"39f0ab27d28ada3177f3fa07a0718007d949f3d78eb49659667dfda4c980c62a59ee19d4ea282aa25b35a36b85685c7092c1ed00f8595a66ce86350c13fc1525::4", "__utma"=>"1.951966301.1273189167.1275610530.1276298761.7", "siesse:usercookiehash"=>"428287255", "__utmz"=>"1.1273189167.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)", "_questioncorp_session"=>"BAh7CiIYdXNlcl9jcmVkZW50aWFsc19pZGkJIhV1c2VyX2NyZWRlbnRpYWxzIgGAMzlmMGFiMjdkMjhhZGEzMTc3ZjNmYTA3YTA3MTgwMDdkOTQ5ZjNkNzhlYjQ5NjU5NjY3ZGZkYTRjOTgwYzYyYTU5ZWUxOWQ0ZWEyODJhYTI1YjM1YTM2Yjg1Njg1YzcwOTJjMWVkMDBmODU5NWE2NmNlODYzNTBjMTNmYzE1MjU6EF9jc3JmX3Rva2VuIjFGN2cyOEkxYm81OURKd05nU2piWUNtdG82TitucXVoTktmUm5LbTVDcXRZPToPc2Vzc2lvbl9pZCIlY2Q1NWNkNzdiZWQ1NmNiNzZjM2IxOTg2MzAxODUyYTgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--8e707dd7e9ce8cf8cfcf85bf306db418391d4000", "siesse:usercookie"=>"4096750"}>, @_current_render=nil, @view_paths=["/Users/dalecook/workspace/questioncorp/app/views"], @assigns_added=nil, @_first_render=nil, @assigns={}, @helpers=#<ActionView::Base::ProxyModule:0x250bf84>>, @header={"Cache-Control"=>"no-cache"}, @request=#<ActionController::Request:0x250c1b4 ...>, @session={"user_credentials_id"=>4, "user_credentials"=>"39f0ab27d28ada3177f3fa07a0718007d949f3d78eb49659667dfda4c980c62a59ee19d4ea282aa25b35a36b85685c7092c1ed00f8595a66ce86350c13fc1525", :_csrf_token=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", :session_id=>"cd55cd77bed56cb76c3b1986301852a8", "flash"=>{}}, @block=nil, @status=200, @assigns=[], @body=["", []], @writer=#<Proc:0x02650188@/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/response.rb:46>>, "rack.request.form_hash"=>{"commit"=>"Save changes", "interview_id"=>"2", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "comment"=>{"comment"=>"sdfasdf asfsadfds sdfadfsd"}}, "rack.session.options"=>{:expire_after=>nil, :path=>"/", :httponly=>true, :domain=>nil, :key=>"_session_id", :id=>"cd55cd77bed56cb76c3b1986301852a8"}, "GATEWAY_INTERFACE"=>"CGI/1.2", "QUERY_STRING"=>"", "action_controller.request.query_parameters"=>{}, "rack.session"=>{"user_credentials_id"=>4, "user_credentials"=>"39f0ab27d28ada3177f3fa07a0718007d949f3d78eb49659667dfda4c980c62a59ee19d4ea282aa25b35a36b85685c7092c1ed00f8595a66ce86350c13fc1525", :_csrf_token=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", :session_id=>"cd55cd77bed56cb76c3b1986301852a8", "flash"=>{}}, "HTTP_ACCEPT"=>"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "HTTP_CONNECTION"=>"keep-alive", "REQUEST_METHOD"=>"POST"}, @parameters={"commit"=>"Save changes", "interview_id"=>"2", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "action"=>"create", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfasdf asfsadfds sdfadfsd"}}>
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 04:20:52', 2, 4, 'sdfasdf asfsadfds sdfadfsd', '2010-06-19 04:20:52')[0m
+
+ActionView::MissingTemplate (Missing template admin/comments/new.erb in view path app/views):
+  app/controllers/admin/comments_controller.rb:22:in `create'
+  app/controllers/admin/comments_controller.rb:14:in `create'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 21:21:31) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfasdf asfsadfds sdfadfsd"}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:21:31', "updated_at" = '2010-06-19 04:21:31' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.7ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.7ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 04:21:31', 2, 4, 'sdfasdf asfsadfds sdfadfsd', '2010-06-19 04:21:31')[0m
+>>>>>> HERRE
+>>>>>>> THERE
+
+NameError (undefined local variable or method `page' for #<Admin::CommentsController:0x243fbb4>):
+  app/controllers/admin/comments_controller.rb:19:in `create'
+  app/controllers/admin/comments_controller.rb:14:in `create'
+
+Rendered rescues/_trace (117.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 21:22:00) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfasdf asfsadfds sdfadfsd"}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:22:00', "updated_at" = '2010-06-19 04:22:00' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.6ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 04:22:00', 2, 4, 'sdfasdf asfsadfds sdfadfsd', '2010-06-19 04:22:00')[0m
+>>>>>> HERRE
+>>>>>>> THERE
+
+NoMethodError (undefined method `insert_html' for nil:NilClass):
+  app/controllers/admin/comments_controller.rb:19:in `create'
+  app/controllers/admin/comments_controller.rb:14:in `create'
+
+Rendered rescues/_trace (37.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 21:24:12) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfasdf asfsadfds sdfadfsd"}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:24:12', "updated_at" = '2010-06-19 04:24:12' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.7ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 04:24:12', 2, 4, 'sdfasdf asfsadfds sdfadfsd', '2010-06-19 04:24:12')[0m
+>>>>>> HERRE
+>>>>>>> THERE
+Completed in 37ms (View: 1, DB: 2) | 200 OK [http://localhost/admin/comments]
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 21:57:27) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfasdf asfsadfds sdfadfsd"}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:57:27', "updated_at" = '2010-06-19 04:57:27' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 04:57:27', 2, 4, 'sdfasdf asfsadfds sdfadfsd', '2010-06-19 04:57:27')[0m
+Redirected to http://localhost:3000/admin/interviews/2
+Completed in 47ms (DB: 2) | 302 Found [http://localhost/admin/comments]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 21:57:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:57:27', "updated_at" = '2010-06-19 04:57:27' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.7ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;35;1mComment Load (1.2ms)[0m   [0mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 59ms (View: 11, DB: 5) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 21:57:39) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>""}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:57:39', "updated_at" = '2010-06-19 04:57:39' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 04:57:39', 2, 4, '', '2010-06-19 04:57:39')[0m
+Redirected to http://localhost:3000/admin/interviews/2
+Completed in 36ms (DB: 2) | 302 Found [http://localhost/admin/comments]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 21:57:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:57:39', "updated_at" = '2010-06-19 04:57:39' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;35;1mComment Load (1.4ms)[0m   [0mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 127ms (View: 12, DB: 4) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 21:59:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-19 04:59:12', "updated_at" = '2010-06-19 04:59:12' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (1.1ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 50ms (View: 8, DB: 3) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-18 21:59:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.8ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-19 04:59:18', "updated_at" = '2010-06-19 04:59:18' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.4ms)[0m   [0mSELECT * FROM "interviews" [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/index
+Completed in 37ms (View: 11, DB: 2) | 200 OK [http://localhost/admin/interviews]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 21:59:20) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:59:20', "updated_at" = '2010-06-19 04:59:20' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 49ms (View: 7, DB: 3) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-18 21:59:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 04:59:25', "updated_at" = '2010-06-19 04:59:25' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.4ms)[0m   [0;1mSELECT * FROM "interviews" [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/index
+Completed in 100ms (View: 10, DB: 1) | 200 OK [http://localhost/admin/interviews]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 21:59:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-19 04:59:27', "updated_at" = '2010-06-19 04:59:27' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 62ms (View: 7, DB: 3) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 22:06:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-19 05:06:33', "updated_at" = '2010-06-19 05:06:33' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 71ms (View: 14, DB: 3) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 22:06:59) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"saadgdf sdf asdfsdfsdf asdfdsf ads"}}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.8ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-19 05:06:59', "updated_at" = '2010-06-19 05:06:59' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mComment Create (0.6ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 05:06:59', 2, 4, 'saadgdf sdf asdfsdfsdf asdfdsf ads', '2010-06-19 05:06:59')[0m
+Redirected to http://localhost:3000/admin/interviews/2
+Completed in 131ms (DB: 2) | 302 Found [http://localhost/admin/comments]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 22:06:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-19 05:06:59', "updated_at" = '2010-06-19 05:06:59' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mUser Load (21.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 73ms (View: 7, DB: 24) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 22:09:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 05:09:26', "updated_at" = '2010-06-19 05:09:26' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.4ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 92ms (View: 20, DB: 3) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 22:09:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-19 05:09:40', "updated_at" = '2010-06-19 05:09:40' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 105ms (View: 36, DB: 3) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 22:10:06) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfsdf sdafsdf sdf sdfasd\r\n"}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 05:10:06', "updated_at" = '2010-06-19 05:10:06' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 05:10:06', 2, 4, 'sdfsdf sdafsdf sdf sdfasd
+', '2010-06-19 05:10:06')[0m
+Rendering admin/comments/create
+Completed in 79ms (View: 14, DB: 2) | 200 OK [http://localhost/admin/comments]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 22:11:11) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfsdf sdafsdf sdf sdfasd\r\n"}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 05:11:11', "updated_at" = '2010-06-19 05:11:11' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 05:11:11', 2, 4, 'sdfsdf sdafsdf sdf sdfasd
+', '2010-06-19 05:11:11')[0m
+>>>>>> HTML
+Rendering admin/comments/create
+Completed in 66ms (View: 1, DB: 2) | 200 OK [http://localhost/admin/comments]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 22:11:57) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfsdf sdafsdf sdf sdfasd\r\n"}}
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-19 05:11:57', "updated_at" = '2010-06-19 05:11:57' WHERE "id" = 4[0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 05:11:57', 2, 4, 'sdfsdf sdafsdf sdf sdfasd
+', '2010-06-19 05:11:57')[0m
+>>>>>> HTML
+Rendering admin/comments/create
+Completed in 169ms (View: 1, DB: 2) | 200 OK [http://localhost/admin/comments]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 22:15:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 05:15:28', "updated_at" = '2010-06-19 05:15:28' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 236ms (View: 193, DB: 4) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 22:15:30) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfsdf sdafsdf sdf sdfasd\r\n"}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 05:15:30', "updated_at" = '2010-06-19 05:15:30' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 05:15:30', 2, 4, 'sdfsdf sdafsdf sdf sdfasd
+', '2010-06-19 05:15:30')[0m
+>>>>>> HTML
+Rendering admin/comments/create
+Completed in 44ms (View: 1, DB: 2) | 200 OK [http://localhost/admin/comments]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 23:32:01) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfsdf sdafsdf sdf sdfasd\r\n"}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 06:32:01', "updated_at" = '2010-06-19 06:32:01' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 06:32:01', 2, 4, 'sdfsdf sdafsdf sdf sdfasd
+', '2010-06-19 06:32:01')[0m
+>>>>>> HTML
+Rendering admin/comments/create
+Completed in 102ms (View: 1, DB: 2) | 200 OK [http://localhost/admin/comments]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 23:32:10) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfsdf sdafsdf sdf sdfasd\r\n"}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 06:32:10', "updated_at" = '2010-06-19 06:32:10' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 06:32:10', 2, 4, 'sdfsdf sdafsdf sdf sdfasd
+', '2010-06-19 06:32:10')[0m
+>>>>>> HTML
+Rendering admin/comments/create
+Completed in 39ms (View: 1, DB: 2) | 200 OK [http://localhost/admin/comments]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 23:32:44) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 06:32:44', "updated_at" = '2010-06-19 06:32:44' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.4ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.9ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0x2416cc8>) on line #23 of app/views/admin/interviews/show.html.erb:
+20: 		<% end %>
+21: 		
+22: 		<div id="comment-form">
+23: 			<% remote_form_for @comment do |f| %>		
+24: 				<%= hidden_field_tag :interview_id, @interview.id %>	
+25: 				<%= f.text_area :comment %>
+26: 				<%= f.submit %>
+
+    app/views/admin/interviews/show.html.erb:23
+    app/controllers/admin/interviews_controller.rb:23:in `show'
+
+Rendered rescues/_trace (52.4ms)
+Rendered rescues/_request_and_response (14.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 23:32:55) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 06:32:55', "updated_at" = '2010-06-19 06:32:55' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;35;1mComment Load (1.5ms)[0m   [0mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 103ms (View: 28, DB: 5) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 23:36:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-19 06:36:30', "updated_at" = '2010-06-19 06:36:30' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (0.9ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 173ms (View: 9, DB: 4) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 23:36:32) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfsdf sdafsdf sdf sdfasd\r\n"}}
+  [4;36;1mInterview Load (0.2ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-19 06:36:32', "updated_at" = '2010-06-19 06:36:32' WHERE "id" = 4[0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 06:36:32', 2, 4, 'sdfsdf sdafsdf sdf sdfasd
+', '2010-06-19 06:36:32')[0m
+>>>>>> HTML
+Rendering admin/comments/create
+Completed in 41ms (View: 1, DB: 2) | 200 OK [http://localhost/admin/comments]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-18 23:39:13) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 06:39:13', "updated_at" = '2010-06-19 06:39:13' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 62ms (View: 10, DB: 4) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-18 23:39:15) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfsdf sdafsdf sdf sdfasd\r\n"}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-19 06:39:15', "updated_at" = '2010-06-19 06:39:15' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-19 06:39:15', 2, 4, 'sdfsdf sdafsdf sdf sdfasd
+', '2010-06-19 06:39:15')[0m
+>>>>>> HTML
+
+ActionView::MissingTemplate (Missing template admin/comments/create.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 19:48:42) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-20 02:48:42', "updated_at" = '2010-06-20 02:48:42' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;35;1mComment Load (1.1ms)[0m   [0mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 117ms (View: 16, DB: 4) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-19 19:48:44) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfsdf sdafsdf sdf sdfasd\r\n"}}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 02:48:44', "updated_at" = '2010-06-20 02:48:44' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mComment Create (0.5ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-20 02:48:44', 2, 4, 'sdfsdf sdafsdf sdf sdfasd
+', '2010-06-20 02:48:44')[0m
+>>>>>> HTML
+
+ActionView::MissingTemplate (Missing template admin/comments/create.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 19:50:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 02:50:29', "updated_at" = '2010-06-20 02:50:29' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (1.3ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+
+ActionView::TemplateError (undefined method `submit_to_remote' for #<ActionView::Helpers::FormBuilder:0x23abef0>) on line #26 of app/views/admin/interviews/show.html.erb:
+23: 			<% form_for [:admin, @comment] do |f| %>		
+24: 				<%= hidden_field_tag :interview_id, @interview.id %>	
+25: 				<%= f.text_area :comment %>
+26: 				<%= f.submit_to_remote "create_comment_btn", "Add Comment", :url => admin_comments_path([:admin, @comment]) %>
+27: 			<% end -%>
+28: 		</div>	
+29: 						
+
+    app/views/admin/interviews/show.html.erb:26
+    app/views/admin/interviews/show.html.erb:23
+    app/controllers/admin/interviews_controller.rb:23:in `show'
+
+Rendered rescues/_trace (43.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 19:50:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (7.8ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 02:50:40', "updated_at" = '2010-06-20 02:50:40' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (2.3ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (1.2ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 77ms (View: 19, DB: 13) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 19:55:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (44.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (59.4ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 02:55:15', "updated_at" = '2010-06-20 02:55:15' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (1.3ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 459ms (View: 51, DB: 107) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::CommentsController#create to admin#<comment:0x2646d18> (for 127.0.0.1 at 2010-06-19 19:55:18) [POST]
+  Parameters: {"format"=>"admin#<comment:0x2646d18>", "interview_id"=>"2", "create_comment_btn"=>"Add Comment", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfsdf sdafsdf sdf sdfasd\n"}}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (7.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 02:55:18', "updated_at" = '2010-06-20 02:55:18' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-20 02:55:18', 2, 4, 'sdfsdf sdafsdf sdf sdfasd
+', '2010-06-20 02:55:18')[0m
+Completed in 53ms (View: 10, DB: 9) | 406 Not Acceptable [http://localhost/admin/comments.admin%23%3Ccomment:0x2646d18%3E]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 19:56:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.8ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 02:56:24', "updated_at" = '2010-06-20 02:56:24' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 190ms (View: 9, DB: 3) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 19:56:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (470.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 02:56:41', "updated_at" = '2010-06-20 02:56:41' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (246.7ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 2552ms (View: 181, DB: 719) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-19 19:56:46) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfsdf sdafsdf sdf sdfasd\n"}}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (17.7ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 02:56:46', "updated_at" = '2010-06-20 02:56:46' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mComment Create (406.4ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-20 02:56:46', 2, 4, 'sdfsdf sdafsdf sdf sdfasd
+', '2010-06-20 02:56:46')[0m
+>>>>>> JS
+Rendering admin/comments/create
+Completed in 532ms (View: 47, DB: 425) | 200 OK [http://localhost/admin/comments]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 20:01:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (36.2ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 03:01:28', "updated_at" = '2010-06-20 03:01:28' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+
+ActionView::TemplateError (Missing template admin/interviews/_comment_block.erb in view path app/views) on line #34 of app/views/admin/interviews/show.html.erb:
+31: 			<b>Comments</b>
+32: 			<div id="comment_list">
+33: 				<% @interview.comments.each do |comment| %>
+34: 					<% render :partial => "comment_block", :locals => {:comment => comment} %>
+35: 				<% end %>      
+36: 			</div>
+37: 		</div>
+
+    app/views/admin/interviews/show.html.erb:34
+    app/views/admin/interviews/show.html.erb:33
+    app/controllers/admin/interviews_controller.rb:23:in `show'
+
+Rendered rescues/_trace (113.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 20:01:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (180.7ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 03:01:41', "updated_at" = '2010-06-20 03:01:41' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (406.3ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+
+ActionView::TemplateError (Missing template comments/_comment_block.erb in view path app/views) on line #34 of app/views/admin/interviews/show.html.erb:
+31: 			<b>Comments</b>
+32: 			<div id="comment_list">
+33: 				<% @interview.comments.each do |comment| %>
+34: 					<% render :partial => "comments/comment_block", :locals => {:comment => comment} %>
+35: 				<% end %>      
+36: 			</div>
+37: 		</div>
+
+    app/views/admin/interviews/show.html.erb:34
+    app/views/admin/interviews/show.html.erb:33
+    app/controllers/admin/interviews_controller.rb:23:in `show'
+
+Rendered rescues/_trace (47.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 20:01:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (24.4ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 03:01:53', "updated_at" = '2010-06-20 03:01:53' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (10.6ms)
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 365ms (View: 26, DB: 27) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 20:02:20) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (623.3ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-20 03:02:21', "updated_at" = '2010-06-20 03:02:21' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (1.2ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (1.8ms)
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 940ms (View: 12, DB: 626) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 20:02:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 03:02:35', "updated_at" = '2010-06-20 03:02:35' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (2.1ms)
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 354ms (View: 193, DB: 4) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 20:02:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-20 03:02:58', "updated_at" = '2010-06-20 03:02:58' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (2.1ms)
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 116ms (View: 17, DB: 4) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 20:03:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 03:03:00', "updated_at" = '2010-06-20 03:03:00' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (0.9ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (1.4ms)
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 60ms (View: 9, DB: 4) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 20:03:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-20 03:03:15', "updated_at" = '2010-06-20 03:03:15' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (1.9ms)
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 124ms (View: 80, DB: 3) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-19 20:03:57) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfsdf sdafsdf sdf sdfasd ccccc\n"}}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 03:03:57', "updated_at" = '2010-06-20 03:03:57' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mComment Create (0.5ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-20 03:03:57', 2, 4, 'sdfsdf sdafsdf sdf sdfasd ccccc
+', '2010-06-20 03:03:57')[0m
+Rendering admin/comments/create
+Rendered admin/comments/_comment_block (0.3ms)
+Completed in 41ms (View: 5, DB: 2) | 200 OK [http://localhost/admin/comments]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-19 20:04:44) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfsdf sdafsdf sdf sdfasd ccccc\n"}}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 03:04:44', "updated_at" = '2010-06-20 03:04:44' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-20 03:04:44', 2, 4, 'sdfsdf sdafsdf sdf sdfasd ccccc
+', '2010-06-20 03:04:44')[0m
+Rendering admin/comments/create
+ERROR: compiling _run_rjs_app47views47admin47comments47create46js46rjs RAISED compile error
+/Users/dalecook/workspace/questioncorp/app/views/admin/comments/create.js.rjs:2: syntax error, unexpected $undefined, expecting kEND
+$('comment_comment').value = ""
+ ^
+/Users/dalecook/workspace/questioncorp/app/views/admin/comments/create.js.rjs:2: syntax error, unexpected ')', expecting kEND
+$('comment_comment').value = ""
+                    ^
+Function body:           def _run_rjs_app47views47admin47comments47create46js46rjs(local_assigns)
+            old_output_buffer = output_buffer;;@template_format = :html;controller.response.content_type ||= Mime::JS;update_page do |page|;page.insert_html :top, "comment_list", :partial => "comment_block" , :locals => {:comment => @comment}
+$('comment_comment').value = ""
+end
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/dalecook/workspace/questioncorp/app/views/admin/comments/create.js.rjs:6:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/dalecook/workspace/questioncorp/app/controllers/admin/comments_controller.rb:15:in `create'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/dalecook/workspace/questioncorp/app/views/admin/comments/create.js.rjs:2: syntax error, unexpected $undefined, expecting kEND
+$('comment_comment').value = ""
+ ^
+/Users/dalecook/workspace/questioncorp/app/views/admin/comments/create.js.rjs:2: syntax error, unexpected ')', expecting kEND
+$('comment_comment').value = ""
+                    ^) on line #2 of app/views/admin/comments/create.js.rjs:
+1: page.insert_html :top, "comment_list", :partial => "comment_block" , :locals => {:comment => @comment}
+2: $('comment_comment').value = ""
+
+    app/views/admin/comments/create.js.rjs:6:in `compile!'
+    app/controllers/admin/comments_controller.rb:15:in `create'
+
+Rendered rescues/_trace (38.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 20:04:57) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (1.4ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 03:04:58', "updated_at" = '2010-06-20 03:04:58' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.5ms)[0m   [0mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;35;1mQuestion Load (0.9ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (1.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (0.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (0.5ms)
+Rendered admin/interviews/_sidebar (0.1ms)
+Completed in 55ms (View: 9, DB: 5) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-19 20:05:04) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfsdf sdafsdf sdf sdfasd ccccc\nsssdsds"}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-20 03:05:04', "updated_at" = '2010-06-20 03:05:04' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-20 03:05:04', 2, 4, 'sdfsdf sdafsdf sdf sdfasd ccccc
+sssdsds', '2010-06-20 03:05:04')[0m
+Rendering admin/comments/create
+ERROR: compiling _run_rjs_app47views47admin47comments47create46js46rjs RAISED compile error
+/Users/dalecook/workspace/questioncorp/app/views/admin/comments/create.js.rjs:2: syntax error, unexpected $undefined, expecting kEND
+$('comment_comment').value = ""
+ ^
+/Users/dalecook/workspace/questioncorp/app/views/admin/comments/create.js.rjs:2: syntax error, unexpected ')', expecting kEND
+$('comment_comment').value = ""
+                    ^
+Function body:           def _run_rjs_app47views47admin47comments47create46js46rjs(local_assigns)
+            old_output_buffer = output_buffer;;@template_format = :html;controller.response.content_type ||= Mime::JS;update_page do |page|;page.insert_html :top, "comment_list", :partial => "comment_block" , :locals => {:comment => @comment}
+$('comment_comment').value = ""
+end
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/dalecook/workspace/questioncorp/app/views/admin/comments/create.js.rjs:6:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/dalecook/workspace/questioncorp/app/controllers/admin/comments_controller.rb:15:in `create'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/dalecook/workspace/questioncorp/app/views/admin/comments/create.js.rjs:2: syntax error, unexpected $undefined, expecting kEND
+$('comment_comment').value = ""
+ ^
+/Users/dalecook/workspace/questioncorp/app/views/admin/comments/create.js.rjs:2: syntax error, unexpected ')', expecting kEND
+$('comment_comment').value = ""
+                    ^) on line #2 of app/views/admin/comments/create.js.rjs:
+1: page.insert_html :top, "comment_list", :partial => "comment_block" , :locals => {:comment => @comment}
+2: $('comment_comment').value = ""
+
+    app/views/admin/comments/create.js.rjs:6:in `compile!'
+    app/controllers/admin/comments_controller.rb:15:in `create'
+
+Rendered rescues/_trace (38.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::CommentsController#create (for 127.0.0.1 at 2010-06-19 20:06:33) [POST]
+  Parameters: {"commit"=>"Save changes", "interview_id"=>"2", "action"=>"create", "authenticity_token"=>"F7g28I1bo59DJwNgSjbYCmto6N+nquhNKfRnKm5CqtY=", "controller"=>"admin/comments", "comment"=>{"comment"=>"sdfsdf sdafsdf sdf sdfasd ccccc\nsssdsds"}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-20 03:06:33', "updated_at" = '2010-06-20 03:06:33' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-20 03:06:33', 2, 4, 'sdfsdf sdafsdf sdf sdfasd ccccc
+sssdsds', '2010-06-20 03:06:33')[0m
+Rendering admin/comments/create
+Rendered admin/comments/_comment_block (0.3ms)
+Completed in 119ms (View: 5, DB: 2) | 200 OK [http://localhost/admin/comments]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 20:07:09) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-20 03:07:09', "updated_at" = '2010-06-20 03:07:09' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;35;1mComment Load (0.8ms)[0m   [0mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (1.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (0.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (0.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (0.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (0.5ms)
+Completed in 59ms (View: 14, DB: 4) | 200 OK [http://localhost/admin/interviews/2]
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-19 20:07:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-20 03:07:10', "updated_at" = '2010-06-20 03:07:10' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.4ms)[0m   [0mSELECT * FROM "interviews" [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/index
+Completed in 53ms (View: 11, DB: 1) | 200 OK [http://localhost/admin/interviews]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-19 20:07:13) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-20 03:07:13', "updated_at" = '2010-06-20 03:07:13' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" WHERE ("interviews"."id" = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".interview_id = 2) [0m
+  [4;36;1mQuestion Load (0.9ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" IN (6,7,5)) [0m
+  [4;35;1mComment Load (0.8ms)[0m   [0mSELECT "comments".* FROM "comments" WHERE ("comments"."commentable_id" = 2 and "comments"."commentable_type" = 'Interview') [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (1.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (0.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (0.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (0.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered admin/comments/_comment_block (0.5ms)
+Completed in 114ms (View: 10, DB: 4) | 200 OK [http://localhost/admin/interviews/2]
