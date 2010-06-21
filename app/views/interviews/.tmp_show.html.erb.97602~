@@ -1,0 +1,2 @@
+  
+<h1>Thanks <%=h @interview.name %>, your interview is now complete.</h1>

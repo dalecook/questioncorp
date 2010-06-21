@@ -8810,3 +8810,499 @@ Rendering template within layouts/application
 Rendering interviews/new
   [4;35;1mQuestion Load (0.6ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
 Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-21 09:21:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-21 16:21:12', "updated_at" = '2010-06-21 16:21:12' WHERE "id" = 4[0m
+  [4;36;1mInterview Load (0.5ms)[0m   [0;1mSELECT * FROM "interviews" [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/index
+Completed in 100ms (View: 37, DB: 1) | 200 OK [http://localhost/admin/interviews]
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-21 09:21:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-21 16:21:15', "updated_at" = '2010-06-21 16:21:15' WHERE "id" = 4[0m
+  [4;35;1mInterview Load (0.4ms)[0m   [0mSELECT * FROM "interviews" [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/index
+Completed in 94ms (View: 34, DB: 1) | 200 OK [http://localhost/admin/interviews]
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ceo@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'bobceo') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '4092647373ba31448c106fb7974c22d192994c3b80a669b731c24e0b6934bb6a2b19f27bf4809b063660040c568da38d975c2efed13ed5e90ee1bd3892fe676c') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("last_login_at", "updated_at", "last_request_at", "crypted_password", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "login", "created_at", "last_login_ip", "email") VALUES(NULL, '2010-06-21 16:31:08', NULL, '631350b70360d5bce8e7ab5ade24fee7aabbf64806b912a4c2cd72d9ed19ac8ab1be1746c83e77a58f1bbbbe2341fd17d052f7ce38ef5f1592c0f986f39d0d69', NULL, 'PEBEutoFYotfLeMD9lrQ', NULL, '4092647373ba31448c106fb7974c22d192994c3b80a669b731c24e0b6934bb6a2b19f27bf4809b063660040c568da38d975c2efed13ed5e90ee1bd3892fe676c', 0, 'bobceo', '2010-06-21 16:31:08', NULL, 'ceo@questionscorp.com')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dave@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'daveadmin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'eb86705d66d9e171b1c1e5b107ad8423993cb09b54c634f7787cdf62497f19f1a70b0fc44e1d800c8a372ca9d8777fa25d7e0e1e0e75d67925207344cbf08931') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("last_login_at", "updated_at", "last_request_at", "crypted_password", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "login", "created_at", "last_login_ip", "email") VALUES(NULL, '2010-06-21 16:31:08', NULL, '9f8789af5175a369b0019b1e9fefb3a8c84c1f82d33092d34eae99522358905478eb1039389781906d74618d49807f5e0fe2ffece0c6514ec4330567436ec462', NULL, 'mPMxpVOsuNIIW7slW-vu', NULL, 'eb86705d66d9e171b1c1e5b107ad8423993cb09b54c634f7787cdf62497f19f1a70b0fc44e1d800c8a372ca9d8777fa25d7e0e1e0e75d67925207344cbf08931', 0, 'daveadmin', '2010-06-21 16:31:08', NULL, 'dave@questionscorp.com')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'justin@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'justinintern') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'bfb956611aa2de837f51d4e86ec63408e93273d9bc3c9559127619ab6d05061e2a863662ad027d4dc491b86cbc461fa5d23f8cb8c0f7de36528e0a329872e61c') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("last_login_at", "updated_at", "last_request_at", "crypted_password", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "login", "created_at", "last_login_ip", "email") VALUES(NULL, '2010-06-21 16:31:08', NULL, '10ef14104a4ff8095abbe96beefc5e74f329d41d5f2d639e3e0ae1e061296322502729fccd4b933229ecd3960701bd524dd3ffaa5293f72986a3a44ae49af46c', NULL, 'nIS7SvUi9b_hlwq8qIok', NULL, 'bfb956611aa2de837f51d4e86ec63408e93273d9bc3c9559127619ab6d05061e2a863662ad027d4dc491b86cbc461fa5d23f8cb8c0f7de36528e0a329872e61c', 0, 'justinintern', '2010-06-21 16:31:08', NULL, 'justin@questionscorp.com')[0m
+  [4;36;1mQuestion Create (0.3ms)[0m   [0;1mINSERT INTO "questions" ("updated_at", "question", "user_id", "active", "created_at") VALUES('2010-06-21 16:31:08', 'Have you ever gone skydiving before?', 7, 't', '2010-06-21 16:31:08')[0m
+  [4;35;1mQuestion Create (0.4ms)[0m   [0mINSERT INTO "questions" ("updated_at", "question", "user_id", "active", "created_at") VALUES('2010-06-21 16:31:08', 'What''s your favorite month?', 7, 't', '2010-06-21 16:31:08')[0m
+  [4;36;1mQuestion Create (0.4ms)[0m   [0;1mINSERT INTO "questions" ("updated_at", "question", "user_id", "active", "created_at") VALUES('2010-06-21 16:31:08', 'What would you name your own company?', 7, 't', '2010-06-21 16:31:08')[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ceo@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'bobceo') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ddd6cd1985f6746e0455f723a200e9a972e415e2abc3317a787d1c1a7188c50ed9a4258826c2fba5285aa95a8da66e0f1f640411e30d930bec80c5fc1ae43d9e') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dave@questionscorp.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'daveadmin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'fdce598c47e5f1b960a3c12af39f8255d141bc2f9d1b8cef58aed06568e5720cbdf413d8582041f5561377dbf7bbfe52ad9b967bcc92ec16eaf0581d861850ea') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'justin@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'justinintern') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e3ed0db85994ccb0b4fe10ed4022f2c7009817ff5f7a407882ae61eece5d03c7ccf1b7d14dc75d78f01e5b8e49adcd6c16933d0d611568fbce4d997f10126e65') LIMIT 1[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ceo@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'bobceo') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd734a8c5a049fa45ce7019af308e16c02d333e7f7a344ab676d955c6607d7524fada7f25d1363ea0ead65982c63e26a0dcac0e5632b0caed5197f96a9c989869') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dave@questionscorp.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'daveadmin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '630a8c02ec67ee589437826b1e3c8aff41686fb4733d32f304ca29906c402004be4c89c8f0532dc8ea5e205895c579c2e9687fc37003748e19089021cc9b60ea') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'justin@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'justinintern') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ab29fbef062ae847c99037c090c3dbe98c7aa09806dca124401b94066365d2e61de4ea636338bb758154e69e78a5f2638e68396ebd94d2a558c997f37df3b424') LIMIT 1[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ceo@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'bobceo') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '3118ecf32a40b0627471ab294d1f0f4bf4c418eea7186b5106a48772467f9c63c0322ceb7b320be5411c29b705bb3065d71f86f5b617277e4b803a650bcda35f') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dave@questionscorp.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'daveadmin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'bc1667324ff2adc70dd2752716afb0f32be31af76ab3cba2909d8f9f70366f9ebec9b99ffc41f006fc50cd2a3602e7bea240737339d4fd69093b68cd61e29a00') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'justin@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'justinintern') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '287dc74cadc721dcd50da844ecb26d7c3b352e4a4bc2e504b3b6fcc706d5ee726e6d7072974c1bdb168683a83cf5eb681e24e846085a584272e346c1f3c38666') LIMIT 1[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ceo@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'bobceo') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '0dbf4391c747da702b937680e97d3db315d029b6c0d73705ee3bf409a122100c68489aeb479f9aedde995e7cc187d55d8c1235994936164aa9176c4d021e009e') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dave@questionscorp.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'daveadmin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '1cb4b9a29ffd30f7c452a00f7d2a90df0d7a2cc933c628f965280b471e9f82178b1c23ed2f43c2e713c74b48c9a381b5004408ce51698c0782e1a0d1f330bf2e') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'justin@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'justinintern') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '4725120dc504f012528ad448353dd27062a20da0b66d03de995e61d0996bb8ecb7563e0c278ad87dfd3a97eaa175d496374eda95e6c24db6b8fb6207fe2fc2f9') LIMIT 1[0m
+  [4;35;1mInterview Create (0.4ms)[0m   [0mINSERT INTO "interviews" ("name", "updated_at", "created_at") VALUES('Grebo Bloggins', '2010-06-21 16:33:10', '2010-06-21 16:33:10')[0m
+  [4;36;1mAnswer Create (0.2ms)[0m   [0;1mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('Once, with my grandma', '2010-06-21 16:33:10', 0, 6, '2010-06-21 16:33:10')[0m
+  [4;35;1mAnswer Create (0.1ms)[0m   [0mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('January, because of the birds', '2010-06-21 16:33:10', 0, 6, '2010-06-21 16:33:10')[0m
+  [4;36;1mAnswer Create (0.1ms)[0m   [0;1mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('Questions Corporation 2', '2010-06-21 16:33:10', 0, 6, '2010-06-21 16:33:10')[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+Sent mail to ceo@questionscorp.com, dave@questionscorp.com, justin@questionscorp.com
+
+Date: Mon, 21 Jun 2010 09:33:10 -0700
+From: no_reply@questionscorp.com
+To: ceo@questionscorp.com, dave@questionscorp.com, justin@questionscorp.com
+Subject: Grebo Bloggins has completed their interview
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Grebo Bloggins has completeed their interview.
+  [4;36;1mComment Create (0.3ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-21 16:33:10', 6, NULL, 'I think I like this guy, he''s a little nutty but very creative.', '2010-06-21 16:33:10')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-21 16:33:10', 6, NULL, 'I don''t know, creative is one thing, but this is a little loopy.', '2010-06-21 16:33:10')[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-06-21 09:33:16) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-21 09:33:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering user_sessions/new
+Completed in 88ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing InterviewsController#new (for 127.0.0.1 at 2010-06-21 09:33:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"interviews"}
+Rendering template within layouts/application
+Rendering interviews/new
+  [4;36;1mQuestion Load (0.5ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing InterviewsController#new (for 127.0.0.1 at 2010-06-21 09:33:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"interviews"}
+Rendering template within layouts/application
+Rendering interviews/new
+  [4;35;1mQuestion Load (0.5ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-21 09:33:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/admin/interviews]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-21 09:33:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering user_sessions/new
+Completed in 19ms (View: 5, DB: 1) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-06-21 09:33:36) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"password"=>"[FILTERED]", "login"=>"bobceo", "remember_me"=>"0"}, "action"=>"create", "authenticity_token"=>"20/azuIyzrGAU6l/FSgPDIc7JRlYqdcqLvDqqbiJp6U=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'bobceo') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "last_request_at" = '2010-06-21 16:33:36', "updated_at" = '2010-06-21 16:33:36', "current_login_at" = '2010-06-21 16:33:36' WHERE "id" = 7[0m
+Redirected to http://localhost:3000/admin/interviews
+Completed in 36ms (DB: 1) | 302 Found [http://localhost/user_session]
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-21 09:33:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '7') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-21 16:33:37', "updated_at" = '2010-06-21 16:33:37' WHERE "id" = 7[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/index
+Completed in 135ms (View: 14, DB: 1) | 200 OK [http://localhost/admin/interviews]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-21 09:33:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '7') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-21 16:33:40', "updated_at" = '2010-06-21 16:33:40' WHERE "id" = 7[0m
+  [4;35;1mInterview Load Including Associations (1.1ms)[0m   [0mSELECT "interviews"."id" AS t0_r0, "interviews"."name" AS t0_r1, "interviews"."created_at" AS t0_r2, "interviews"."updated_at" AS t0_r3, "answers"."id" AS t1_r0, "answers"."interview_id" AS t1_r1, "answers"."question_id" AS t1_r2, "answers"."answer" AS t1_r3, "answers"."created_at" AS t1_r4, "answers"."updated_at" AS t1_r5, "questions"."id" AS t2_r0, "questions"."question" AS t2_r1, "questions"."user_id" AS t2_r2, "questions"."active" AS t2_r3, "questions"."created_at" AS t2_r4, "questions"."updated_at" AS t2_r5 FROM "interviews" LEFT OUTER JOIN "answers" ON answers.interview_id = interviews.id LEFT OUTER JOIN "questions" ON "questions".id = "answers".question_id WHERE ("interviews"."id" = 6) ORDER BY questions.id ASC[0m
+  [4;36;1mComment Load (0.8ms)[0m   [0;1mSELECT * FROM "comments" WHERE (commentable_id = 6 and commentable_type = 'Interview') ORDER BY created_at DESC, created_at ASC[0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;35;1mQuestion Load (0.2ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" = 0) [0m
+
+ActionView::TemplateError (undefined method `question' for nil:NilClass) on line #15 of app/views/admin/interviews/show.html.erb:
+12: 	  	<% @interview.answers.each do |answer| %>
+13: 			<div class="answer_block">
+14: 				<div class="question">
+15: 					Q. <%=h answer.question.question %>
+16: 					<% if !answer.question.active %>
+17: 						<span class = "inactive">
+18: 							This question is no longer asked 
+
+    app/views/admin/interviews/show.html.erb:15
+    app/views/admin/interviews/show.html.erb:12
+    app/controllers/admin/interviews_controller.rb:23:in `show'
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ceo@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'bobceo') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'de46b847fff3c72496c878e4aefaa495c954e18e8464cabf9448364e8aa0bbaaffaa2dcd9edb3bb3a66acbf9b86d30fa6fb41ccda6543f06bd7f3850f876f7f0') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("last_login_at", "updated_at", "last_request_at", "crypted_password", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "login", "created_at", "last_login_ip", "email") VALUES(NULL, '2010-06-21 16:35:30', NULL, '4d1dd07ead46724997039e1b9f03a04561eabf7a4695f30f4d84fb92ae1bfff2c3818c8400b027d5ec187810e5595acf51e43364dccb76f913d48da7a88dd7fb', NULL, 'hIpWSE0TRcllzfy9JnvM', NULL, 'de46b847fff3c72496c878e4aefaa495c954e18e8464cabf9448364e8aa0bbaaffaa2dcd9edb3bb3a66acbf9b86d30fa6fb41ccda6543f06bd7f3850f876f7f0', 0, 'bobceo', '2010-06-21 16:35:30', NULL, 'ceo@questionscorp.com')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dave@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'daveadmin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e933c6b769353ecdb5cc56bdd61101af93a96a0ee6b828dd87616a723f398a5fb9f47dc1666b50372b2c6ff18014100da23ee2cdd4b1a75cd2b6a86b53018dfa') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("last_login_at", "updated_at", "last_request_at", "crypted_password", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "login", "created_at", "last_login_ip", "email") VALUES(NULL, '2010-06-21 16:35:30', NULL, 'e65e5cffeac0a4178b7cde743489b71a5aa8f0bb54830fc6d745fff9c759e06f9ddce067bbb0874254def9362570c0b59c5dc2539ca5949971148ee508666d93', NULL, '_jCkNZlRI9zqf9hYUqwm', NULL, 'e933c6b769353ecdb5cc56bdd61101af93a96a0ee6b828dd87616a723f398a5fb9f47dc1666b50372b2c6ff18014100da23ee2cdd4b1a75cd2b6a86b53018dfa', 0, 'daveadmin', '2010-06-21 16:35:30', NULL, 'dave@questionscorp.com')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'justin@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'justinintern') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '658dac5211e21b9859f2ccab46e0cec6e421d6bf377932cf933b445649381047a6b1a4af2aebe29ff496df2a2b9e5732d195b06800e08cda00f78c5385aca2ba') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("last_login_at", "updated_at", "last_request_at", "crypted_password", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "login", "created_at", "last_login_ip", "email") VALUES(NULL, '2010-06-21 16:35:30', NULL, '06596508773366aa4699eede2641609de79d3fbeb00d6f5ab23582ea2d0162ba4af3961ba9f31465eb7f1c46fcd77c93f6e39120344f329cf133debe0a283e27', NULL, 'xf3-649voNv3Szq9BLh6', NULL, '658dac5211e21b9859f2ccab46e0cec6e421d6bf377932cf933b445649381047a6b1a4af2aebe29ff496df2a2b9e5732d195b06800e08cda00f78c5385aca2ba', 0, 'justinintern', '2010-06-21 16:35:30', NULL, 'justin@questionscorp.com')[0m
+  [4;36;1mQuestion Create (0.3ms)[0m   [0;1mINSERT INTO "questions" ("updated_at", "question", "user_id", "active", "created_at") VALUES('2010-06-21 16:35:30', 'Have you ever gone skydiving before?', 10, 't', '2010-06-21 16:35:30')[0m
+  [4;35;1mQuestion Create (0.3ms)[0m   [0mINSERT INTO "questions" ("updated_at", "question", "user_id", "active", "created_at") VALUES('2010-06-21 16:35:30', 'What''s your favorite month?', 10, 't', '2010-06-21 16:35:30')[0m
+  [4;36;1mQuestion Create (0.3ms)[0m   [0;1mINSERT INTO "questions" ("updated_at", "question", "user_id", "active", "created_at") VALUES('2010-06-21 16:35:30', 'What would you name your own company?', 10, 't', '2010-06-21 16:35:30')[0m
+  [4;35;1mInterview Create (0.3ms)[0m   [0mINSERT INTO "interviews" ("name", "updated_at", "created_at") VALUES('Grebo Bloggins', '2010-06-21 16:35:30', '2010-06-21 16:35:30')[0m
+  [4;36;1mAnswer Create (0.1ms)[0m   [0;1mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('Once, with my grandma', '2010-06-21 16:35:30', 17, 7, '2010-06-21 16:35:30')[0m
+  [4;35;1mAnswer Create (0.1ms)[0m   [0mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('January, because of the birds', '2010-06-21 16:35:30', 18, 7, '2010-06-21 16:35:30')[0m
+  [4;36;1mAnswer Create (0.1ms)[0m   [0;1mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('Questions Corporation 2', '2010-06-21 16:35:30', 19, 7, '2010-06-21 16:35:30')[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+Sent mail to ceo@questionscorp.com, dave@questionscorp.com, justin@questionscorp.com
+
+Date: Mon, 21 Jun 2010 09:35:30 -0700
+From: no_reply@questionscorp.com
+To: ceo@questionscorp.com, dave@questionscorp.com, justin@questionscorp.com
+Subject: Grebo Bloggins has completed their interview
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Grebo Bloggins has completeed their interview.
+  [4;36;1mComment Create (0.3ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-21 16:35:30', 7, 10, 'I think I like this guy, he''s a little nutty but very creative.', '2010-06-21 16:35:30')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-21 16:35:30', 7, 11, 'I don''t know, creative is one thing, but this is a little loopy.', '2010-06-21 16:35:30')[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ceo@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'bobceo') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e09ea8234309f95a2bd722bd78dca86273d0edcdfb8048d1ea61eb484b62212996bddcfff33c325db1c6ac9b97b29d075354e6557f99ff08ae97be18ff8066ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dave@questionscorp.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'daveadmin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '3bcdb59e9354c6a220a33f6969b06996bdd455247f46a81f31d50526ea8bed013e02c8935b8e2674f330c0419b7af257cde1dc28b7efc1526b2d8dc451cd4fd6') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'justin@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'justinintern') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd40013bf4e19d7e0fe188d56381d903d55f3a73f4dd771116716c21dcb6f9402121f8496f82125a9f9b17f44dc20ce6208e92513abd6bd2521de0857b1b83864') LIMIT 1[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ceo@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'bobceo') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5e190d5d69467d83a94377ebe9dbe1160e4f8da3e3bd30e4228bb8ff4f295193a9387ca3963d272ee95b5e8b2cace3ee4e3e6d24a375713fa66ad3611c3ec30b') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dave@questionscorp.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'daveadmin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '445f510f885cfcea1374758125d60c7fc7cc139610d13d7b280c0033f126aaca7bc1451132c6f90d9a8e9690275aee905fc756a7ca49bcb4b79da6d57ec80505') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'justin@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'justinintern') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '289297f88735bd7a96f6d59539a01a5f561e3fa57b045ce0cbfc45a9b810783f2f2ebf463de901ab4c9af04f4863b7b00c78e5dbf0249e21226532cfd3b34288') LIMIT 1[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ceo@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'bobceo') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b2102d99ea610f6a3fc40a883d2b127956bb019167e2b312086f18a0c8aad290d0c2e2a89e6204fb8e02166e1f93f7e1bfa36e185d00ffdbad30831fecd31f2f') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dave@questionscorp.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'daveadmin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd3223d77617b0b268a7072a58bc5a8812beb0db6ac5e6847459ac2db501635be42730066d56684f4df116a22e01a638769dc7759b61d98d0d94ca6202f583bc8') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'justin@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'justinintern') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '307b3020b2ea28cff7abd5ea38b1c412aee4dc97229a2c300df407fbe15465d7e92af380a4b428859dd94d00e590d94f603a1993e341b479e2ab00a059a4d0d5') LIMIT 1[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ceo@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'bobceo') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c1499beaf474a9a5c694c0ec487188150c2a7b6168d47f98763d070c5b53675e95e48363dba34f1753ebbf98e67eb4ed48e3e1077766f38560058e060753fe90') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ceo@questionscorp.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'bobceo') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c1499beaf474a9a5c694c0ec487188150c2a7b6168d47f98763d070c5b53675e95e48363dba34f1753ebbf98e67eb4ed48e3e1077766f38560058e060753fe90') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dave@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'daveadmin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '0c824ed4b6d82f15024fa4744b03881fccdc0baa2ba07811b1d7b0b47fb748335457b8660a014fcff91d1d849e023c39afe29239abd75d213f36d0d75c69b6b6') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'justin@questionscorp.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'justinintern') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5fe9b48466d2e008d6409fe29d50770c7bc9421383e5ecf544b3d5563670df2c4909016ce9584be87a95b3742601b1430eae20544107cedc575073a07fc3f02d') LIMIT 1[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ceo@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'bobceo') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '275c2fac25dd1b401ff06a9c144613e0035ab903599b1d2435d531d2076b1cf87a4e51a6894d3a8dc2858e66e1e12cb30645c28a931e9527a5cbab1f847429ef') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dave@questionscorp.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'daveadmin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '1a291f3e5a6114ea8c583bcf404224b650f35673c66e035f0ad16a2c5c7d1db571304557f864efcbaea5a8cbc3a9e16d8e07c1ae943179fa722f35302f81c80e') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'justin@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'justinintern') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '8f3906c892b63dc40031775a122c2ffa481001aac843ed84d53176c3174dfe6687382496f4e3da9955a6cb43edd0d438ede25289408f8099104ba0076318f854') LIMIT 1[0m
+  [4;35;1mInterview Create (0.4ms)[0m   [0mINSERT INTO "interviews" ("name", "updated_at", "created_at") VALUES('Grebo Bloggins', '2010-06-21 16:38:12', '2010-06-21 16:38:12')[0m
+  [4;36;1mAnswer Create (0.2ms)[0m   [0;1mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('Once, with my grandma', '2010-06-21 16:38:12', NULL, 8, '2010-06-21 16:38:12')[0m
+  [4;35;1mAnswer Create (0.1ms)[0m   [0mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('January, because of the birds', '2010-06-21 16:38:12', NULL, 8, '2010-06-21 16:38:12')[0m
+  [4;36;1mAnswer Create (0.1ms)[0m   [0;1mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('Questions Corporation 2', '2010-06-21 16:38:12', NULL, 8, '2010-06-21 16:38:12')[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+Sent mail to ceo@questionscorp.com, dave@questionscorp.com, justin@questionscorp.com
+
+Date: Mon, 21 Jun 2010 09:38:12 -0700
+From: no_reply@questionscorp.com
+To: ceo@questionscorp.com, dave@questionscorp.com, justin@questionscorp.com
+Subject: Grebo Bloggins has completed their interview
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Grebo Bloggins has completeed their interview.
+  [4;36;1mComment Create (0.3ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-21 16:38:12', 8, NULL, 'I think I like this guy, he''s a little nutty but very creative.', '2010-06-21 16:38:12')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-21 16:38:12', 8, NULL, 'I don''t know, creative is one thing, but this is a little loopy.', '2010-06-21 16:38:12')[0m
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-21 09:38:16) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '7') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) LIMIT 1[0m
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 83ms (DB: 0) | 302 Found [http://localhost/admin/interviews/6]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-21 09:38:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '7') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering user_sessions/new
+Completed in 20ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-21 09:38:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '7') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) LIMIT 1[0m
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/admin/interviews]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-21 09:38:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '7') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering user_sessions/new
+Completed in 19ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-06-21 09:38:26) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"password"=>"[FILTERED]", "login"=>"bobceo", "remember_me"=>"0"}, "action"=>"create", "authenticity_token"=>"20/azuIyzrGAU6l/FSgPDIc7JRlYqdcqLvDqqbiJp6U=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '7') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'bobceo') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "last_request_at" = '2010-06-21 16:38:26', "updated_at" = '2010-06-21 16:38:26', "current_login_at" = '2010-06-21 16:38:26' WHERE "id" = 10[0m
+Redirected to http://localhost:3000/admin/interviews
+Completed in 36ms (DB: 1) | 302 Found [http://localhost/user_session]
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-21 09:38:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '10') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-21 16:38:27', "updated_at" = '2010-06-21 16:38:27' WHERE "id" = 10[0m
+  [4;36;1mInterview Load (0.4ms)[0m   [0;1mSELECT * FROM "interviews" [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/index
+Completed in 90ms (View: 33, DB: 1) | 200 OK [http://localhost/admin/interviews]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-21 09:38:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '10') LIMIT 1[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-21 16:38:30', "updated_at" = '2010-06-21 16:38:30' WHERE "id" = 10[0m
+  [4;35;1mInterview Load Including Associations (1.2ms)[0m   [0mSELECT "interviews"."id" AS t0_r0, "interviews"."name" AS t0_r1, "interviews"."created_at" AS t0_r2, "interviews"."updated_at" AS t0_r3, "answers"."id" AS t1_r0, "answers"."interview_id" AS t1_r1, "answers"."question_id" AS t1_r2, "answers"."answer" AS t1_r3, "answers"."created_at" AS t1_r4, "answers"."updated_at" AS t1_r5, "questions"."id" AS t2_r0, "questions"."question" AS t2_r1, "questions"."user_id" AS t2_r2, "questions"."active" AS t2_r3, "questions"."created_at" AS t2_r4, "questions"."updated_at" AS t2_r5 FROM "interviews" LEFT OUTER JOIN "answers" ON answers.interview_id = interviews.id LEFT OUTER JOIN "questions" ON "questions".id = "answers".question_id WHERE ("interviews"."id" = 8) ORDER BY questions.id ASC[0m
+  [4;36;1mComment Load (0.9ms)[0m   [0;1mSELECT * FROM "comments" WHERE (commentable_id = 8 and commentable_type = 'Interview') ORDER BY created_at DESC, created_at ASC[0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+
+ActionView::TemplateError (undefined method `question' for nil:NilClass) on line #15 of app/views/admin/interviews/show.html.erb:
+12: 	  	<% @interview.answers.each do |answer| %>
+13: 			<div class="answer_block">
+14: 				<div class="question">
+15: 					Q. <%=h answer.question.question %>
+16: 					<% if !answer.question.active %>
+17: 						<span class = "inactive">
+18: 							This question is no longer asked 
+
+    app/views/admin/interviews/show.html.erb:15
+    app/views/admin/interviews/show.html.erb:12
+    app/controllers/admin/interviews_controller.rb:23:in `show'
+
+Rendered rescues/_trace (44.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ceo@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'bobceo') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5611a2316dddaa5bf3fb84ceef24356a595bb6e19515d04aba4b972b6328c5ad7d09668d1886ecd4b38ad46260e4a55c6295e25ef7f3052f924b943c6f065a24') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("last_login_at", "updated_at", "last_request_at", "crypted_password", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "login", "created_at", "last_login_ip", "email") VALUES(NULL, '2010-06-21 16:39:13', NULL, 'a645cded600e89a1e783bab76d069865e696b033ca673dab0a7eb3eac7a4c8bbe798e0dd8c6151c74d8c314d6ebdf2e953d80e376d40ec0e19d017fcc9cc70cc', NULL, 'zH8mbmGyd4lDTMaHgZ1Z', NULL, '5611a2316dddaa5bf3fb84ceef24356a595bb6e19515d04aba4b972b6328c5ad7d09668d1886ecd4b38ad46260e4a55c6295e25ef7f3052f924b943c6f065a24', 0, 'bobceo', '2010-06-21 16:39:13', NULL, 'ceo@questionscorp.com')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'dave@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'daveadmin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '3a5a00e16c3db6588647efba4287b37e9ba71cb21564076866fe3d8f273352afb1431bb25440bc3d50451b18222cede951048cb2752fdd749dcb59cc444a5f75') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("last_login_at", "updated_at", "last_request_at", "crypted_password", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "login", "created_at", "last_login_ip", "email") VALUES(NULL, '2010-06-21 16:39:13', NULL, '55e4d07c1458ce1715e6849c04772c3ee97c89aabf916bbd07fd6449b613bc3fbcd9c1c1f8f5bd9b578d816f895680da3e0061db822a0803f5d13732dc7cafdd', NULL, '4JM4YnADV4-MZDDgUg2C', NULL, '3a5a00e16c3db6588647efba4287b37e9ba71cb21564076866fe3d8f273352afb1431bb25440bc3d50451b18222cede951048cb2752fdd749dcb59cc444a5f75', 0, 'daveadmin', '2010-06-21 16:39:13', NULL, 'dave@questionscorp.com')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'justin@questionscorp.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'justinintern') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '595358d8041ca32bdf22fd03efb8a985476f4b882712736b0c77b1a4ce2b5e18958bfd85df1ebc7f41f1a673ab3d0ac7205066ec07973603e3a605b066bcb1a7') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("last_login_at", "updated_at", "last_request_at", "crypted_password", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "login", "created_at", "last_login_ip", "email") VALUES(NULL, '2010-06-21 16:39:13', NULL, '271d4ebf7920f7a7221b0c9a776f88308a33f1f10873f96ce5c814bd983be4ae52467dda462d5c09f3642b4c4a0b09f0e3debc932168efcecdf824559ffe46d3', NULL, 'G8v84YslA3hSAI9wE1Py', NULL, '595358d8041ca32bdf22fd03efb8a985476f4b882712736b0c77b1a4ce2b5e18958bfd85df1ebc7f41f1a673ab3d0ac7205066ec07973603e3a605b066bcb1a7', 0, 'justinintern', '2010-06-21 16:39:13', NULL, 'justin@questionscorp.com')[0m
+  [4;36;1mQuestion Create (0.4ms)[0m   [0;1mINSERT INTO "questions" ("updated_at", "question", "user_id", "active", "created_at") VALUES('2010-06-21 16:39:13', 'Have you ever gone skydiving before?', 13, 't', '2010-06-21 16:39:13')[0m
+  [4;35;1mQuestion Create (0.3ms)[0m   [0mINSERT INTO "questions" ("updated_at", "question", "user_id", "active", "created_at") VALUES('2010-06-21 16:39:13', 'What''s your favorite month?', 13, 't', '2010-06-21 16:39:13')[0m
+  [4;36;1mQuestion Create (0.3ms)[0m   [0;1mINSERT INTO "questions" ("updated_at", "question", "user_id", "active", "created_at") VALUES('2010-06-21 16:39:13', 'What would you name your own company?', 13, 't', '2010-06-21 16:39:13')[0m
+  [4;35;1mInterview Create (0.4ms)[0m   [0mINSERT INTO "interviews" ("name", "updated_at", "created_at") VALUES('Grebo Bloggins', '2010-06-21 16:39:13', '2010-06-21 16:39:13')[0m
+  [4;36;1mAnswer Create (0.1ms)[0m   [0;1mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('Once, with my grandma', '2010-06-21 16:39:13', 20, 9, '2010-06-21 16:39:13')[0m
+  [4;35;1mAnswer Create (0.1ms)[0m   [0mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('January, because of the birds', '2010-06-21 16:39:13', 21, 9, '2010-06-21 16:39:13')[0m
+  [4;36;1mAnswer Create (0.1ms)[0m   [0;1mINSERT INTO "answers" ("answer", "updated_at", "question_id", "interview_id", "created_at") VALUES('Questions Corporation 2', '2010-06-21 16:39:13', 22, 9, '2010-06-21 16:39:13')[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+Sent mail to ceo@questionscorp.com, dave@questionscorp.com, justin@questionscorp.com
+
+Date: Mon, 21 Jun 2010 09:39:13 -0700
+From: no_reply@questionscorp.com
+To: ceo@questionscorp.com, dave@questionscorp.com, justin@questionscorp.com
+Subject: Grebo Bloggins has completed their interview
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Grebo Bloggins has completeed their interview.
+  [4;36;1mComment Create (0.3ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-21 16:39:14', 9, 13, 'I think I like this guy, he''s a little nutty but very creative.', '2010-06-21 16:39:14')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "commentable_id", "user_id", "comment", "created_at") VALUES('Interview', '2010-06-21 16:39:14', 9, 14, 'I don''t know, creative is one thing, but this is a little loopy.', '2010-06-21 16:39:14')[0m
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-21 09:39:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '10') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) LIMIT 1[0m
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/admin/interviews]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-06-21 09:39:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '10') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering user_sessions/new
+Completed in 18ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-06-21 09:39:56) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"password"=>"[FILTERED]", "login"=>"bobceo", "remember_me"=>"0"}, "action"=>"create", "authenticity_token"=>"20/azuIyzrGAU6l/FSgPDIc7JRlYqdcqLvDqqbiJp6U=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '10') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'bobceo') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "last_request_at" = '2010-06-21 16:39:56', "updated_at" = '2010-06-21 16:39:56', "current_login_at" = '2010-06-21 16:39:56' WHERE "id" = 13[0m
+Redirected to http://localhost:3000/admin/interviews
+Completed in 39ms (DB: 1) | 302 Found [http://localhost/user_session]
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-21 09:39:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '13') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-21 16:39:56', "updated_at" = '2010-06-21 16:39:56' WHERE "id" = 13[0m
+  [4;35;1mInterview Load (0.3ms)[0m   [0mSELECT * FROM "interviews" [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/index
+Completed in 72ms (View: 13, DB: 1) | 200 OK [http://localhost/admin/interviews]
+
+
+Processing Admin::InterviewsController#show (for 127.0.0.1 at 2010-06-21 09:39:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '13') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-21 16:39:58', "updated_at" = '2010-06-21 16:39:59' WHERE "id" = 13[0m
+  [4;36;1mInterview Load Including Associations (1.2ms)[0m   [0;1mSELECT "interviews"."id" AS t0_r0, "interviews"."name" AS t0_r1, "interviews"."created_at" AS t0_r2, "interviews"."updated_at" AS t0_r3, "answers"."id" AS t1_r0, "answers"."interview_id" AS t1_r1, "answers"."question_id" AS t1_r2, "answers"."answer" AS t1_r3, "answers"."created_at" AS t1_r4, "answers"."updated_at" AS t1_r5, "questions"."id" AS t2_r0, "questions"."question" AS t2_r1, "questions"."user_id" AS t2_r2, "questions"."active" AS t2_r3, "questions"."created_at" AS t2_r4, "questions"."updated_at" AS t2_r5 FROM "interviews" LEFT OUTER JOIN "answers" ON answers.interview_id = interviews.id LEFT OUTER JOIN "questions" ON "questions".id = "answers".question_id WHERE ("interviews"."id" = 9) ORDER BY questions.id ASC[0m
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE (commentable_id = 9 and commentable_type = 'Interview') ORDER BY created_at DESC, created_at ASC[0m
+Rendering template within layouts/admin
+Rendering admin/interviews/show
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendered admin/comments/_comment_block (9.2ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendered admin/comments/_comment_block (7.4ms)
+Completed in 98ms (View: 26, DB: 4) | 200 OK [http://localhost/admin/interviews/9]
+
+
+Processing Admin::InterviewsController#index (for 127.0.0.1 at 2010-06-21 09:40:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/interviews"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '13') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "last_request_at" = '2010-06-21 16:40:12', "updated_at" = '2010-06-21 16:40:12' WHERE "id" = 13[0m
+  [4;36;1mInterview Load (0.3ms)[0m   [0;1mSELECT * FROM "interviews" [0m
+Rendering template within layouts/admin
+Rendering admin/interviews/index
+Completed in 69ms (View: 13, DB: 1) | 200 OK [http://localhost/admin/interviews]
+
+
+Processing Admin::QuestionsController#index (for 127.0.0.1 at 2010-06-21 09:40:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/questions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '13') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "last_request_at" = '2010-06-21 16:40:13', "updated_at" = '2010-06-21 16:40:13' WHERE "id" = 13[0m
+Rendering template within layouts/admin
+Rendering admin/questions/index
+  [4;35;1mQuestion Load (0.5ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Completed in 165ms (View: 40, DB: 2) | 200 OK [http://localhost/admin/questions]
+
+
+Processing InterviewsController#new (for 127.0.0.1 at 2010-06-21 09:40:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"interviews"}
+Rendering template within layouts/application
+Rendering interviews/new
+  [4;35;1mQuestion Load (0.5ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."active" = 't') [0m
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/]

@@ -8,18 +8,18 @@
   <div class="content">
     <div class="inner">
       
-	    <div class="headline">Interview responses for <%=h @interview.name %></div>
+	    <div class="headline">Interview responses for <%= @interview.name %></div>
 	  	<% @interview.answers.each do |answer| %>
 			<div class="answer_block">
 				<div class="question">
-					Q. <%=h answer.question.question %>
+					Q. <%= answer.question.question %>
 					<% if !answer.question.active %>
 						<span class = "inactive">
 							This question is no longer asked 
 						</span>
 					<% end %>
 				</div>
-				<div class="answer">A. <%=h answer.answer %></div>
+				<div class="answer">A. <%= answer.answer %></div>
 			</div>
 		<% end %>
 								

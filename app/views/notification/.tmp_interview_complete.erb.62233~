@@ -1,0 +1,1 @@
+<%= @interview.name %> has completeed their interview.

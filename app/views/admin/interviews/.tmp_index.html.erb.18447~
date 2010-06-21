@@ -19,7 +19,7 @@
             <%= interview.id %>
           </td>
                     <td>
-            <%= link_to h(interview.name), admin_interview_path(interview) %>
+            <%= link_to interview.name, admin_interview_path(interview) %>
           </td>
                     <td>
             <%= interview.created_at %>

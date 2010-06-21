@@ -14,10 +14,10 @@
         <% @questions.each do |question| -%>
         <tr class="<%= cycle("odd", "even") %>">
           <td>
-            <%= "INACTIVE --" unless question.active %><%=h question.question %>
+            <%= "INACTIVE --" unless question.active %><%= question.question %>
           </td>
           <td>
-            <%=h question.user.login %>
+            <%= question.user.login %>
           </td>
           <td>
             <%= question.created_at %>
