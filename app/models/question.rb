@@ -1,7 +1,7 @@
 class Question < ActiveRecord::Base
 
-  #who created the question?
   belongs_to :user
+  has_many :answers
  
   #generally we're only interested in active questions
   named_scope :active, :conditions => {:active => true}
@@ -11,5 +11,9 @@ class Question < ActiveRecord::Base
 
   #must have an actual question and a user
   validates_presence_of :question, :user_id
+
+  def inactivate!
+    update_attribute(:active, false)    
+  end
   
 end

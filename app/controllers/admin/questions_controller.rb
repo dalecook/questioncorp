@@ -36,8 +36,12 @@ class Admin::QuestionsController < ApplicationController
   # DELETE /questions/1
   # DELETE /questions/1.xml
   def destroy
+    
+    #since questions are directly associated with answers the questions should never be removed from the 
+    #database, since then answers will no longer have a question, instead make them inactive 
+    
     @question = Question.find(params[:id])
-    @question.update_attribute(:active, false)
+    @question.inactivate!
 
     respond_to do |format|
       format.html { redirect_to(admin_questions_url) }

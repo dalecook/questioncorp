@@ -34,4 +34,11 @@ class QuestionTest < ActiveSupport::TestCase
     
   end
 
+  test "inactivate" do
+    
+    questions(:question_one).inactivate!
+    assert_equal questions(:question_one).active, false
+    
+  end
+
 end
