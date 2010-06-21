@@ -6,6 +6,8 @@ class Interview < ActiveRecord::Base
 
   after_create :notify_users
 
+  #since the CEO is a big beliver in colaboration, add comments to the interviews so that company employees
+  #can comment on the answers
   acts_as_commentable
 
   #get an interview and retrieve all the answers, ordered 
