@@ -8,6 +8,7 @@ class Interview < ActiveRecord::Base
 
   acts_as_commentable
 
+  #get an interview and retrieve all the answers, ordered 
   def self.find_with_answers(id)
     self.find id, :include => [{:answers => :question}], :order => "questions.id ASC"
   end

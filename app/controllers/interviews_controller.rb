@@ -1,7 +1,5 @@
 class InterviewsController < ApplicationController
 
-  # GET /interviews/1
-  # GET /interviews/1.xml
   def show
     @interview = Interview.find(params[:id])
 
@@ -10,10 +8,10 @@ class InterviewsController < ApplicationController
     end
   end
 
-  # GET /interviews/new
-  # GET /interviews/new.xml
   def new
     @interview = Interview.new
+
+    #get all the currently active questions
     @questions = Question.active
 
     respond_to do |format|
@@ -21,11 +19,11 @@ class InterviewsController < ApplicationController
     end
   end
 
-  # POST /interviews
-  # POST /interviews.xml
   def create
+    
     @interview = Interview.new(params[:interview])
     
+    #for each question, assign the answer submitted
     params[:questions].each_pair do |q, v|
         @interview.answers << Answer.new(:question_id => q.to_i, :answer => v)
     end

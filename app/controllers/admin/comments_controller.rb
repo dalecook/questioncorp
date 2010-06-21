@@ -1,10 +1,5 @@
-class Admin::CommentsController < ApplicationController
+class Admin::CommentsController < Admin::AdminController
 
-  before_filter :require_user
-
-
-  # POST /questions
-  # POST /questions.xml
   def create
     
     @interview = Interview.find(params[:interview_id])

@@ -1,12 +1,10 @@
-class Admin::QuestionsController < ApplicationController
-
-  before_filter :require_user
-  layout 'admin'
+class Admin::QuestionsController < Admin::AdminController
   
-  # GET /questions
-  # GET /questions.xml
   def index
+    
     @questions = Question.active
+
+    #this is for the new question form on the index page
     @question = Question.new
 
     respond_to do |format|
@@ -14,8 +12,6 @@ class Admin::QuestionsController < ApplicationController
     end
   end
 
-  # POST /questions
-  # POST /questions.xml
   def create
     @question = Question.new(params[:question])
     
@@ -33,8 +29,6 @@ class Admin::QuestionsController < ApplicationController
     end
   end
 
-  # DELETE /questions/1
-  # DELETE /questions/1.xml
   def destroy
     
     #since questions are directly associated with answers the questions should never be removed from the 
